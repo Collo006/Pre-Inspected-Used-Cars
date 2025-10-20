@@ -1,10 +1,10 @@
 let cars = [
-    { id: '1', model: 'Mazda CX-5', location: 'Makuyu'},
-    { id: '2', model: 'Mazda CX-4', location: 'Makuya'},
-    { id: '3', model: 'Mazda CX-04', location: 'Makuyaa'},
-    { id: '4', model: 'Mazda CX-3', location: 'Makuyi'},
-    { id: '5', model: 'Mazda CX-2', location: 'Makulu'},
-    { id: '6', model: 'Mazda CX-1', location: 'Makuyus'}
+    { id: '1', model: 'Mazda CX-5', location: 'Makuyu' },
+    { id: '2', model: 'Mazda CX-4', location: 'Makuya' },
+    { id: '3', model: 'Mazda CX-04', location: 'Makuyaa' },
+    { id: '4', model: 'Mazda CX-3', location: 'Makuyi' },
+    { id: '5', model: 'Mazda CX-2', location: 'Makulu' },
+    { id: '6', model: 'Mazda CX-10', location: 'Makuyus' }
 ];
 let carspecifications = [
     { id: '1', price: "200,00", mileage: "300", engine_size: "300cc",
