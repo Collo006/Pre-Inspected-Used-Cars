@@ -3,6 +3,7 @@ type Car{
     id:ID!
     model: String!
     location:String!
+    image: String!
 
 }
 type CarSpecification{
@@ -27,10 +28,64 @@ type CarHistory{
     inspection_report:String!
     log_book:String!
 }
+type Interior{
+    seats:String!
+    dashboard:String!
+    roof:String!
+    infotainment:String!
+    air_conditioner:String!
+    switches:String!
+    mats:String!
+    electrical_system:[String]!
+}
+type Exterior{
+    doors:String!
+    paint:String!
+    wipers:String!
+    windscreen:String!
+    headlights:String!
+    windows:String!
+    bumper:String!
+    side_mirrors:String!
+    transmission_engine:[String]!
+}
+type Suspension{
+    ball_joints:String!
+    arms_suspension:String!
+    shock_absorbers:String!
+    mounting:String!
+    brake_pads:String!
+    axels:String!
+    bushes:String!
+    braking_system:[String]!
+}
+type Accessories{
+    jack_spanner:String!
+    spare_wheel:String!
+}
+type Tires{
+    left_front:String!
+    right_front:String!
+    left_rear:String!
+    right_rear:String!
+}
 type Query{
     cars:[Car]
+    specific_car(id:ID!):[Car]
     carspecifications: [CarSpecification]
+    specific_car(id:ID!):[CarSpecification]
     carshistory:[CarHistory]
+    specific_car_history(id:ID!):[CarHistory]
+    interiors:[Interior]
+    specific_car_interior(id:ID!):[Interior]
+    exteriors:[Exterior]
+    specific_car_exterior(id:ID!):[Exterior]
+    suspensions:[Suspension]
+    specific_car_suspension(id:ID!):[Suspension]
+    accessory:[Accessories]
+    specific_car_accessory(id:ID!):[Accessories]
+    tire:[Tires]
+    specific_car_tire(id:ID!):[Tires]
     
 }
 `

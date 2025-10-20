@@ -1,10 +1,10 @@
 let cars = [
-    { id: '1', model: 'Mazda CX-5', location: 'Makuyu' },
-    { id: '2', model: 'Mazda CX-4', location: 'Makuya' },
-    { id: '3', model: 'Mazda CX-04', location: 'Makuyaa' },
-    { id: '4', model: 'Mazda CX-3', location: 'Makuyi' },
-    { id: '5', model: 'Mazda CX-2', location: 'Makulu' },
-    { id: '6', model: 'Mazda CX-10', location: 'Makuyus' }
+    { id: '1', model: 'Mazda CX-5', location: 'Makuyu', image: "http://localhost:4001/images/car1.jpg" },
+    { id: '2', model: 'Mazda CX-4', location: 'Makuya', image: "http://localhost:4001/images/car2.jpg" },
+    { id: '3', model: 'Mazda CX-04', location: 'Makuyaa', image: "http://localhost:4001/images/car3.jpg" },
+    { id: '4', model: 'Mazda CX-3', location: 'Makuyi', image: "http://localhost:4001/images/car4.jpg" },
+    { id: '5', model: 'Mazda CX-2', location: 'Makulu', image: "http://localhost:4001/images/car5.jpg" },
+    { id: '6', model: 'Mazda CX-10', location: 'Makuyus', image: "http://localhost:4001/images/car6.jpg" }
 ];
 let carspecifications = [
     { id: '1', price: "200,00", mileage: "300", engine_size: "300cc",
@@ -32,8 +32,10 @@ let carshistory = [
         not_scrapped: "yes",
         not_stolen: "no",
         original_plate: "yes",
+        original_color: "yes",
         latest_owner: "yes",
         inspection_report: "yes",
+        log_book: "one owner"
     },
     {
         id: "2",
@@ -41,8 +43,10 @@ let carshistory = [
         not_scrapped: "yes",
         not_stolen: "no",
         original_plate: "yes",
+        original_color: "yes",
         latest_owner: "yes",
         inspection_report: "yes",
+        log_book: "one owner"
     },
     {
         id: "3",
@@ -50,8 +54,10 @@ let carshistory = [
         not_scrapped: "yes",
         not_stolen: "no",
         original_plate: "yes",
+        original_color: "yes",
         latest_owner: "yes",
         inspection_report: "yes",
+        log_book: "one owner"
     },
     {
         id: "4",
@@ -59,8 +65,10 @@ let carshistory = [
         not_scrapped: "yes",
         not_stolen: "no",
         original_plate: "yes",
+        original_color: "yes",
         latest_owner: "yes",
         inspection_report: "yes",
+        log_book: "one owner"
     },
     {
         id: "5",
@@ -68,8 +76,10 @@ let carshistory = [
         not_scrapped: "yes",
         not_stolen: "no",
         original_plate: "yes",
+        original_color: "yes",
         latest_owner: "yes",
         inspection_report: "yes",
+        log_book: "one owner"
     },
     {
         id: "6",
@@ -77,8 +87,50 @@ let carshistory = [
         not_scrapped: "yes",
         not_stolen: "no",
         original_plate: "yes",
+        original_color: "yes",
         latest_owner: "yes",
         inspection_report: "yes",
+        log_book: "one owner"
     }
 ];
-export default { cars, carspecifications, carshistory };
+let interiors = [
+    { id: "1", seats: "good condition", dashboard: " functional", roof: "good condition", infotainment: "functional", air_conditioner: "functional", switches: "functional", mats: "good condition", electrical_system: ["functional", "very good"] },
+    { id: "2", seats: "good condition", dashboard: " functional", roof: "good condition", infotainment: "functional", air_conditioner: "functional", switches: "functional", mats: "good condition", electrical_system: ["functional", "very good"] },
+    { id: "3", seats: "good condition", dashboard: " functional", roof: "good condition", infotainment: "functional", air_conditioner: "functional", switches: "functional", mats: "good condition", electrical_system: ["functional", "very good"] },
+    { id: "4", seats: "good condition", dashboard: " functional", roof: "good condition", infotainment: "functional", air_conditioner: "functional", switches: "functional", mats: "good condition", electrical_system: ["functional", "very good"] },
+    { id: "5", seats: "good condition", dashboard: " functional", roof: "good condition", infotainment: "functional", air_conditioner: "functional", switches: "functional", mats: "good condition", electrical_system: ["functional", "very good"] },
+    { id: "6", seats: "good condition", dashboard: " functional", roof: "good condition", infotainment: "functional", air_conditioner: "functional", switches: "functional", mats: "good condition", electrical_system: ["functional", "very good"] }
+];
+let exteriors = [
+    { id: "1", doors: "functional", paint: "good condition", windscreen: "good condition", headlights: "functional", windows: "functional", bumper: "good condition", side_mirrors: "good condition", transmission_engine: ["good condition", "very good"], wipers: "functional" },
+    { id: "2", doors: "functional", paint: "good condition", windscreen: "good condition", headlights: "functional", windows: "functional", bumper: "good condition", side_mirrors: "good condition", transmission_engine: ["good condition", "very good"], wipers: "functional" },
+    { id: "3", doors: "functional", paint: "good condition", windscreen: "good condition", headlights: "functional", windows: "functional", bumper: "good condition", side_mirrors: "good condition", transmission_engine: ["good condition", "very good"], wipers: "functional" },
+    { id: "4", doors: "functional", paint: "good condition", windscreen: "good condition", headlights: "functional", windows: "functional", bumper: "good condition", side_mirrors: "good condition", transmission_engine: ["good condition", "very good"], wipers: "functional" },
+    { id: "5", doors: "functional", paint: "good condition", windscreen: "good condition", headlights: "functional", windows: "functional", bumper: "good condition", side_mirrors: "good condition", transmission_engine: ["good condition", "very good"], wipers: "functional" },
+    { id: "6", doors: "functional", paint: "good condition", windscreen: "good condition", headlights: "functional", windows: "functional", bumper: "good condition", side_mirrors: "good condition", transmission_engine: ["good condition", "very good"], wipers: "functional" }
+];
+let suspensions = [
+    { id: "1", ball_joints: "good condition", arms_suspension: "good condition", shock_absorbers: "good condition", mounting: "good condition", brake_pads: "good condition", axels: "good condition", bushes: "good condition", braking_system: ["good condition", "no errors"] },
+    { id: "2", ball_joints: "good condition", arms_suspension: "good condition", shock_absorbers: "good condition", mounting: "good condition", brake_pads: "good condition", axels: "good condition", bushes: "good condition", braking_system: ["good condition", "no errors"] },
+    { id: "3", ball_joints: "good condition", arms_suspension: "good condition", shock_absorbers: "good condition", mounting: "good condition", brake_pads: "good condition", axels: "good condition", bushes: "good condition", braking_system: ["good condition", "no errors"] },
+    { id: "4", ball_joints: "good condition", arms_suspension: "good condition", shock_absorbers: "good condition", mounting: "good condition", brake_pads: "good condition", axels: "good condition", bushes: "good condition", braking_system: ["good condition", "no errors"] },
+    { id: "5", ball_joints: "good condition", arms_suspension: "good condition", shock_absorbers: "good condition", mounting: "good condition", brake_pads: "good condition", axels: "good condition", bushes: "good condition", braking_system: ["good condition", "no errors"] },
+    { id: "6", ball_joints: "good condition", arms_suspension: "good condition", shock_absorbers: "good condition", mounting: "good condition", brake_pads: "good condition", axels: "good condition", bushes: "good condition", braking_system: ["good condition", "no errors"] }
+];
+let accessory = [
+    { id: "1", jack_spanner: "available", spare_wheel: "available" },
+    { id: "2", jack_spanner: "available", spare_wheel: "available" },
+    { id: "3", jack_spanner: "available", spare_wheel: "available" },
+    { id: "4", jack_spanner: "available", spare_wheel: "available" },
+    { id: "5", jack_spanner: "available", spare_wheel: "available" },
+    { id: "6", jack_spanner: "available", spare_wheel: "available" },
+];
+let tire = [
+    { id: "1", left_front: "good condition", right_front: "good condition", left_rear: "bad condition", right_rear: "bad condtion" },
+    { id: "2", left_front: "good condition", right_front: "good condition", left_rear: "bad condition", right_rear: "bad condtion" },
+    { id: "3", left_front: "good condition", right_front: "good condition", left_rear: "bad condition", right_rear: "bad condtion" },
+    { id: "4", left_front: "good condition", right_front: "good condition", left_rear: "bad condition", right_rear: "bad condtion" },
+    { id: "5", left_front: "good condition", right_front: "good condition", left_rear: "bad condition", right_rear: "bad condtion" },
+    { id: "6", left_front: "good condition", right_front: "good condition", left_rear: "bad condition", right_rear: "bad condtion" },
+];
+export default { cars, carspecifications, carshistory, interiors, exteriors, suspensions, accessory, tire };
