@@ -30,9 +30,91 @@ const resolvers={
         },
         tire(){
             return _db.tire
+        },
+        specific_car(_,args){
+            return _db.cars.find((car)=>car.id === args.id)
+        },
+        unit_car(_,args){
+            return _db.carspecifications.find((car)=> car.id=== args.id)
+        },
+        specific_car_history(_,args){
+            return _db.carshistory.find((car)=> car.id=== args.id)
+        },
+        specific_car_interior(_,args){
+            return _db.interiors.find((car)=> car.id===args.id)
+        },
+        specific_car_exterior(_,args){
+            return _db.exteriors.find((car)=> car.id===args.id)
+        },
+        specific_car_suspension(_,args){
+            return _db.suspensions.find((car)=> car.id===args.id)
+        },
+        specific_car_accessory(_,args){
+            return _db.accessory.find((car)=> car.id===args.id)
+        },
+        specific_car_tire(_,args){
+            return _db.tire.find((car)=> car.id===args.id)
         }
+     },
+     CarSpecification:{
+        cars(parent:any){
+            return _db.cars.filter((car)=> car.unitcar_id===parent.id)
+        }
+     },
+     CarHistory:{
+        cars(parent:any){
+            return _db.cars.filter((car)=> car.specificCarHistory_id===parent.id)
+        }
+     },
+     Interior:{
+        cars(parent:any){
+            return _db.cars.filter((car)=>car.specificCarInterior_id===parent.id)
+        }
+     },
+     Exterior:{
+        cars(parent:any){
+            return _db.cars.filter((car)=>car.specificCarExterior_id===parent.id)
+        }
+     },
+     Suspension:{
+        cars(parent:any){
+            return _db.cars.filter((car)=>car.specificCarSuspension_id===parent.id)
+        }
+     },
+     Accessories:{
+        cars(parent:any){
+            return _db.cars.filter((car)=>car.specificCarAccessory_id===parent.id)
+        }
+     },
+     Tires:{
+        cars(parent:any){
+            return _db.cars.filter((car)=>car.specificCarTire_id===parent.id)
+        }
+     },
+     Car:{
+        unit_car(parent:any){
+            return _db.carspecifications.find((car)=> car.id===parent.unitcar_id)
+        },
+        specific_car_history(parent:any){
+            return _db.carshistory.find((car)=> car.id===parent.specificCarHistory_id)
+        },
+        specific_car_interior(parent:any){
+            return _db.interiors.find((car)=>car.id===parent.specificCarInterior_id)
+        },
+        specific_car_exterior(parent:any){
+            return _db.exteriors.find((car)=>car.id===parent.specificCarExterior_id)
+        },
+        specific_car_suspension(parent:any){
+            return _db.suspensions.find((car)=>car.id===parent.specificCarSuspension_id)
+        },
+        specific_car_accessory(parent:any){
+            return _db.accessory.find((car)=>car.id===parent.specificCarAccessory_id)
+        },
+        specific_car_tire(parent:any){
+            return _db.tire.find((car)=>car.id===parent.specificCarTire_id)
+        }
+     }
 
-    }
 }
 
 const app =express();

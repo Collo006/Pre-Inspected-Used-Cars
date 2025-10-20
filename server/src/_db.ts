@@ -1,10 +1,10 @@
 let cars = [
-    { id: '1', model: 'Mazda CX-5', location: 'Makuyu',image: "http://localhost:4001/images/car1.jpg"},
-    { id: '2', model: 'Mazda CX-4', location: 'Makuya',image: "http://localhost:4001/images/car2.jpg"},
-    { id: '3', model: 'Mazda CX-04', location: 'Makuyaa',image: "http://localhost:4001/images/car3.jpg"},
-    { id: '4', model: 'Mazda CX-3', location: 'Makuyi',image: "http://localhost:4001/images/car4.jpg"},
-    { id: '5', model: 'Mazda CX-2', location: 'Makulu',image: "http://localhost:4001/images/car5.jpg"},
-    { id: '6', model: 'Mazda CX-10', location: 'Makuyus',image: "http://localhost:4001/images/car6.jpg"}
+    { id: '1', model: 'Mazda CX-5', location: 'Makuyu',image: "http://localhost:4001/images/car1.jpg", unitcar_id:"1",specificCarHistory_id:"1",specificCarInterior_id:"1",specificCarExterior_id:"1",specificCarSuspension_id:"1",specificCarAccessory_id:"1",specificCarTire_id:"1"},
+    { id: '2', model: 'Mazda CX-4', location: 'Makuya',image: "http://localhost:4001/images/car2.jpg", unitcar_id:"2",specificCarHistory_id:"2",specificCarInterior_id:"2",specificCarExterior_id:"2",specificCarSuspension_id:"2",specificCarAccessory_id:"2",specificCarTire_id:"2"},
+    { id: '3', model: 'Mazda CX-04', location: 'Makuyaa',image: "http://localhost:4001/images/car3.jpg", unitcar_id:"3",specificCarHistory_id:"3",specificCarInterior_id:"3",specificCarExterior_id:"3",specificCarSuspension_id:"3",specificCarAccessory_id:"3",specificCarTire_id:"3"},
+    { id: '4', model: 'Mazda CX-3', location: 'Makuyi',image: "http://localhost:4001/images/car4.jpg", unitcar_id:"4",specificCarHistory_id:"4",specificCarInterior_id:"4",specificCarExterior_id:"4",specificCarSuspension_id:"4",specificCarAccessory_id:"4",specificCarTire_id:"4"},
+    { id: '5', model: 'Mazda CX-2', location: 'Makulu',image: "http://localhost:4001/images/car5.jpg", unitcar_id:"5",specificCarHistory_id:"5",specificCarInterior_id:"5",specificCarExterior_id:"5",specificCarSuspension_id:"5",specificCarAccessory_id:"5",specificCarTire_id:"5"},
+    { id: '6', model: 'Mazda CX-10', location: 'Makuyus',image: "http://localhost:4001/images/car6.jpg", unitcar_id:"6",specificCarHistory_id:"6",specificCarInterior_id:"6",specificCarExterior_id:"6",specificCarSuspension_id:"6",specificCarAccessory_id:"6",specificCarTire_id:"6"}
 ];
 let carspecifications = [
     { id: '1', price: "200,00", mileage: "300", engine_size: "300cc",
