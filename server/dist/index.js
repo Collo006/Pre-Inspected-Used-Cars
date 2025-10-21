@@ -128,3 +128,4 @@ const { url } = await startStandaloneServer(server, {
     context: async () => ({ app })
 });
 console.log(`Server ready at port ${url}`);
+console.log(`Static images served at http://localhost:${PORT}/images/`);
