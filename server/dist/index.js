@@ -1,9 +1,10 @@
 import { ApolloServer } from "@apollo/server";
-import { startStandaloneServer } from "@apollo/server/standalone";
+import { expressMiddleware } from "@as-integrations/express4"; // Correct for v5
 import express from "express";
 import path from "path";
 import { typeDefs } from "./schema.js";
 import _db from "./_db.js";
+import cors from "cors";
 const resolvers = {
     Query: {
         cars() {
@@ -115,16 +116,42 @@ const resolvers = {
     }
 };
 const app = express();
-//serve static images
+app.use(cors());
+// Debug middleware to check requests
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.path}`);
+    next();
+});
+// Serve static images
 app.use("/images", express.static(path.join(process.cwd(), "src/images")));
 const server = new ApolloServer({
     typeDefs,
     resolvers
 });
-//start apollo server with express
 const PORT = process.env.PORT || 40001;
-const { url } = await startStandaloneServer(server, {
-    listen: { port: Number(PORT) },
-    context: async () => ({ app })
-});
-console.log(`Server ready at port ${url}`);
+async function startServer() {
+    await server.start();
+    // Custom middleware to ensure body is parsed
+    const graphqlMiddleware = [
+        express.json(),
+        (req, res, next) => {
+            console.log('Body parsed:', req.body);
+            next();
+        },
+        expressMiddleware(server)
+    ];
+    app.use("/graphql", ...graphqlMiddleware);
+    app.get("/", (req, res) => {
+        res.json({
+            status: "Server is running",
+            graphql: "Available at /graphql",
+            images: "Available at /images/{filename}"
+        });
+    });
+    app.listen(PORT, () => {
+        console.log(` Server running on http://localhost:${PORT}`);
+        console.log(` GraphQL at http://localhost:${PORT}/graphql`);
+        console.log(` Images at http://localhost:${PORT}/images/`);
+    });
+}
+startServer().catch(console.error);
