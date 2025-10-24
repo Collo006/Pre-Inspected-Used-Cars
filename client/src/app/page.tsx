@@ -4,6 +4,8 @@ import { useQuery } from "@apollo/client/react";
 import { gql } from "@apollo/client";
 import { Car,CarsData } from "../interfaces";
 import Image from "next/image";
+import Header from "@/layout/Header";
+import ImageSlider from "@/components/ImageSlider";
 
 const GET_CARS = gql `query CarsQuery {
   cars{
@@ -24,18 +26,17 @@ export default function Home() {
   if(!data?.cars) return <p>No cars to display</p>
 
   return (
-    <div className="mt-40 ml-10">
-      <p className="text-red-600">Good boy</p>
-      <h1>CARS</h1>
-      <div>
-        {data.cars.map((car:Car)=>(
-          <div key={car.id}>
-            <p>Model:{car.model}</p>
-            <p>Location:{car.location}</p>
-         <Image src={car.image} alt={car.model} width={200} height={200} />
-          </div>
-))}
-      </div>
-    </div>
+<div className=" w-auto">
+  <Header></Header>
+  <div className="">
+<ImageSlider/>
+  </div>
+</div>
   );
 }
+
+/** 
+ *  <Image src={car.image} alt={car.model} width={200} height={200} />
+ *   <img src="/images/car1.jpg" alt="Car" width="300" height="100" />
+
+ */
