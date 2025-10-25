@@ -1,10 +1,10 @@
-"use client";
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const images = [
   "/images/header-bg.jpg",
-  "/images/header-bg.jpg"
+  "/images/oldies.jpg"
  
 ];
 
@@ -19,7 +19,7 @@ export default function ImageSlider() {
       );
     }, 4000); // change delay (ms)
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); //Cleans up the interval when the component unmounts (or if the effect re-runs). Prevents memory leaks and duplicate timers.
   }, []);
 
   return (
@@ -34,7 +34,7 @@ export default function ImageSlider() {
           className={`absolute inset-0 transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
-        >
+        >{/** used to change the opacity based on the currently active image, relative so absolutely positioned children (slides) can be placed inside. */}
           <Image
             src={src}
             alt={`Slide ${index + 1}`}
