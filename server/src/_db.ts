@@ -6,6 +6,14 @@ let cars = [
     { id: '5', model: 'Mazda CX-2', location: 'Makulu',image: "http://localhost:40001/images/car5.jpg", unitcar_id:"5",specificCarHistory_id:"5",specificCarInterior_id:"5",specificCarExterior_id:"5",specificCarSuspension_id:"5",specificCarAccessory_id:"5",specificCarTire_id:"5"},
     { id: '6', model: 'Mazda CX-10', location: 'Makuyus',image: "http://localhost:40001/images/car6.jpg", unitcar_id:"6",specificCarHistory_id:"6",specificCarInterior_id:"6",specificCarExterior_id:"6",specificCarSuspension_id:"6",specificCarAccessory_id:"6",specificCarTire_id:"6"}
 ];
+let newarrivals=[
+    {id:"1",model:"audi Q6",location:"Kikuyu",image:"http://localhost:40001/images/car7.jpg",price:"500,000",mileage:"1000",year:"2003", engine_size:"500cc"},
+    {id:"2",model:"BMW M5",location:"Langata",image:"http://localhost:40001/images/car8.jpg",price:"329,000",mileage:"500",year:"2009", engine_size:"400cc"},
+    {id:"3",model:"Toyota auris",location:"Kericho",image:"http://localhost:40001/images/car9.jpg",price:"129,219",mileage:"1500",year:"2010", engine_size:"298cc"},
+    {id:"4",model:"VW golf",location:"Ngong",image:"http://localhost:40001/images/car10.jpg",price:"981,721",mileage:"2000",year:"2019", engine_size:"280cc"},
+    {id:"5",model:"Ford F150",location:"BuruBuru",image:"http://localhost:40001/images/car11.jpg",price:"817,345",mileage:"2500",year:"2022", engine_size:"250cc"},
+    {id:"6",model:"Toyota Prado",location:"Karen",image:"http://localhost:40001/images/car12.jpg",price:"371,983",mileage:"2400",year:"2005", engine_size:"700cc"}
+]
 let carspecifications = [
     { id: '1', price: "200,00", mileage: "300", engine_size: "300cc",
         engine_power: "422 Hp", fuel: "20 km per Liter", year: "2009", reg_no: "KDB 892U",
@@ -134,4 +142,4 @@ let tire=[
     {id:"6",left_front:"good condition", right_front:"good condition", left_rear:"bad condition", right_rear:"bad condtion"},
 ];
 
-export default { cars, carspecifications, carshistory, interiors, exteriors, suspensions, accessory, tire };
+export default { cars, carspecifications, carshistory, interiors, exteriors, suspensions, accessory, tire, newarrivals };

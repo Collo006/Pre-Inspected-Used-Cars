@@ -10,6 +10,9 @@ const resolvers = {
         cars() {
             return _db.cars;
         },
+        newarrivals() {
+            return _db.newarrivals;
+        },
         carspecifications() {
             return _db.carspecifications;
         },
@@ -33,6 +36,9 @@ const resolvers = {
         },
         specific_car(_, args) {
             return _db.cars.find((car) => car.id === args.id);
+        },
+        new_car_arrival(_, args) {
+            return _db.newarrivals.find((car) => car.id === args.id);
         },
         unit_car(_, args) {
             return _db.carspecifications.find((car) => car.id === args.id);

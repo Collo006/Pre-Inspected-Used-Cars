@@ -13,6 +13,17 @@ type Car{
     specific_car_tire: Tires!
 
 }
+type NewArrival{
+    id:ID!
+    model:String!
+    location:String!
+    image:String!
+    price:String!
+    mileage:String!
+    year:String!
+    engine_size:String!
+}
+
 type CarSpecification{
     id:ID!
     price:String!
@@ -86,6 +97,8 @@ type Tires{
 type Query{
     cars:[Car]
     specific_car(id:ID!):Car
+    newarrivals:[NewArrival]
+    new_car_arrival(id:ID!):NewArrival
     carspecifications: [CarSpecification]
     unit_car(id:ID!):CarSpecification
     carshistory:[CarHistory]
