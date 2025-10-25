@@ -63,16 +63,27 @@ return(
          {/*<h2 className="text-2xl font-semibold mb-2">
             {data.newarrivals[currentIndex].model}
          </h2>*/}
-         <div className="-mt-60 text-center  grid grid-cols-2">
-          <p className="ml-58 text-center pl-12 text-sm w-auto pt-2">Price</p>
-          <p className="-ml-72 text-center"><span className="text-6xl">{data.newarrivals[currentIndex].price}</span></p>
+         <div className="-mt-20 text-center ">
+          <p className=" text-center text-sm w-auto pt-2">Price</p>
+          <p className=" text-center"><span className="text-6xl">{data.newarrivals[currentIndex].price}</span></p>
          </div>
-         <div className="border border-green-600 grid grid-cols-2">
-<p> Year: {data.newarrivals[currentIndex].year}</p>
-        <p> Model: {data.newarrivals[currentIndex].model}</p>
-        <p> Mileage: {data.newarrivals[currentIndex].mileage}</p>
-        <p> Engine Size: {data.newarrivals[currentIndex].engine_size}</p>
-       
+         <div className=" grid grid-cols-2 text-center">
+          <div>
+          <p className=" text-center text-sm w-auto ">Mileage</p>
+          <p className=" text-center"><span className="text-6xl">{data.newarrivals[currentIndex].mileage}</span></p>
+          </div>
+       <div>
+      <p className=" text-center text-sm w-auto ">Year</p>
+          <p className=" text-center"><span className="text-6xl">{data.newarrivals[currentIndex].year}</span></p>
+       </div>
+       <div>
+        <p className=" text-center text-sm w-auto ">Engine Size</p>
+          <p className=" text-center"><span className="text-6xl">{data.newarrivals[currentIndex].engine_size}</span></p>
+       </div>
+       <div>
+        <p className=" text-center text-sm w-auto ">Model</p>
+          <p className=" text-center"><span className="text-6xl">{data.newarrivals[currentIndex].model}</span></p>
+       </div>
          </div>
 {/*<p> Location: {data.newarrivals[currentIndex].location}</p>
         <p> Price: {data.newarrivals[currentIndex].price}</p>
