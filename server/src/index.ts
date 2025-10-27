@@ -15,6 +15,9 @@ const resolvers={
         newarrivals(){
            return _db.newarrivals
         },
+        special_car_deals(){
+            return _db.special_car_deals
+        },
         carspecifications(){
             return _db.carspecifications
         },
@@ -41,6 +44,9 @@ const resolvers={
         },
         new_car_arrival(_,args){
             return _db.newarrivals.find((car)=> car.id===args.id)
+        },
+        special_car(_,args){
+            return _db.special_car_deals.find((car)=> car.id===args.id)
         },
         unit_car(_,args){
             return _db.carspecifications.find((car)=> car.id=== args.id)

@@ -23,7 +23,14 @@ type NewArrival{
     year:String!
     engine_size:String!
 }
-
+type SpecialCarDeal{
+    id:ID!
+    model:String!
+    year:String!
+    price:String!
+    mileage:String!
+    image:String!
+}
 type CarSpecification{
     id:ID!
     price:String!
@@ -99,6 +106,8 @@ type Query{
     specific_car(id:ID!):Car
     newarrivals:[NewArrival]
     new_car_arrival(id:ID!):NewArrival
+    special_car_deals:[SpecialCarDeal]
+    special_car(id:ID!):SpecialCarDeal
     carspecifications: [CarSpecification]
     unit_car(id:ID!):CarSpecification
     carshistory:[CarHistory]

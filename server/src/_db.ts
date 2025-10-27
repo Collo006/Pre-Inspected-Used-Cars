@@ -14,6 +14,20 @@ let newarrivals=[
     {id:"5",model:"Ford F150",location:"BuruBuru",image:"http://localhost:40001/images/car11.jpg",price:"817,345",mileage:"2500",year:"2022", engine_size:"250cc"},
     {id:"6",model:"Toyota Prado",location:"Karen",image:"http://localhost:40001/images/car12.jpg",price:"371,983",mileage:"2400",year:"2005", engine_size:"700cc"}
 ]
+let special_car_deals=[
+    {id:"1",model:"BMW M3", year:"2009",price:"900,000",mileage:"888",image:"http://localhost:40001/images/car7.jpg"},
+    {id:"2",model:"AUDI SQ7", year:"2016",price:"452,719",mileage:"817",image:"http://localhost:40001/images/car1.jpg"},
+    {id:"3",model:"GOLF GTR", year:"2017",price:"780,000",mileage:"201",image:"http://localhost:40001/images/car3.jpg"},
+    {id:"4",model:"TOYOTA AURIS", year:"2020",price:"389,012",mileage:"2019",image:"http://localhost:40001/images/car6.jpg"},
+    {id:"5",model:"MAZDA AXELA", year:"2021",price:"681,716",mileage:"3000",image:"http://localhost:40001/images/car4.jpg"},
+    {id:"6",model:"SUZUKI SWIFT", year:"2018",price:"457,819",mileage:"2671",image:"http://localhost:40001/images/car10.jpg"},
+    {id:"7",model:"BMW M3", year:"2009",price:"900,000",mileage:"888",image:"http://localhost:40001/images/car7.jpg"},
+    {id:"8",model:"AUDI SQ7", year:"2016",price:"452,719",mileage:"817",image:"http://localhost:40001/images/car1.jpg"},
+    {id:"9",model:"GOLF GTR", year:"2017",price:"780,000",mileage:"201",image:"http://localhost:40001/images/car3.jpg"},
+    {id:"10",model:"TOYOTA AURIS", year:"2020",price:"389,012",mileage:"2019",image:"http://localhost:40001/images/car6.jpg"},
+    {id:"11",model:"MAZDA AXELA", year:"2021",price:"681,716",mileage:"3000",image:"http://localhost:40001/images/car4.jpg"},
+    {id:"12",model:"SUZUKI SWIFT", year:"2018",price:"457,819",mileage:"2671",image:"http://localhost:40001/images/car10.jpg"}
+]
 let carspecifications = [
     { id: '1', price: "200,00", mileage: "300", engine_size: "300cc",
         engine_power: "422 Hp", fuel: "20 km per Liter", year: "2009", reg_no: "KDB 892U",
@@ -142,4 +156,4 @@ let tire=[
     {id:"6",left_front:"good condition", right_front:"good condition", left_rear:"bad condition", right_rear:"bad condtion"},
 ];
 
-export default { cars, carspecifications, carshistory, interiors, exteriors, suspensions, accessory, tire, newarrivals };
+export default { cars, carspecifications, carshistory, interiors, exteriors, suspensions, accessory, tire, newarrivals, special_car_deals };
