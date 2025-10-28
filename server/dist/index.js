@@ -16,6 +16,9 @@ const resolvers = {
         special_car_deals() {
             return _db.special_car_deals;
         },
+        suv_pickups() {
+            return _db.suv_pickups;
+        },
         carspecifications() {
             return _db.carspecifications;
         },
@@ -45,6 +48,9 @@ const resolvers = {
         },
         special_car(_, args) {
             return _db.special_car_deals.find((car) => car.id === args.id);
+        },
+        suv_and_pickup(_, args) {
+            return _db.suv_pickups.find((car) => car.id === args.id);
         },
         unit_car(_, args) {
             return _db.carspecifications.find((car) => car.id === args.id);

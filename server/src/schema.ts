@@ -31,6 +31,15 @@ type SpecialCarDeal{
     mileage:String!
     image:String!
 }
+type SUVPickup{
+    id:ID!
+    model:String!
+    year:String!
+    price:String!
+    mileage:String!
+    image:String!
+ 
+}
 type CarSpecification{
     id:ID!
     price:String!
@@ -108,6 +117,8 @@ type Query{
     new_car_arrival(id:ID!):NewArrival
     special_car_deals:[SpecialCarDeal]
     special_car(id:ID!):SpecialCarDeal
+    suv_pickups:[SUVPickup]
+    suv_and_pickup(id:ID!):SUVPickup
     carspecifications: [CarSpecification]
     unit_car(id:ID!):CarSpecification
     carshistory:[CarHistory]

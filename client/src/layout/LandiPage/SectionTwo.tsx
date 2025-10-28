@@ -37,13 +37,13 @@ export default function SectionTwo() {
     });
   }, [currentSlide, totalSlides, data]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (!data?.special_car_deals) return;
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
-    }, 5000);
+    }, 100000);
     return () => clearInterval(interval);
-  }, [data, totalSlides]);
+  }, [data, totalSlides]);*/
 
   if (loading) return <p className="text-center py-10">Loading cars...</p>;
   if (error)
@@ -68,7 +68,7 @@ export default function SectionTwo() {
         </h1>
       </section>
 
-      {/* 🔥 Full-screen scrollable area */}
+      {/* Full-screen scrollable area */}
       <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw]">
         {/* Arrows */}
         <button
@@ -144,8 +144,7 @@ export default function SectionTwo() {
                         <div className="space-y-1 text-sm text-gray-600">
                           <p>Year: {car.year}</p>
                           <p>Mileage: {car.mileage.toLocaleString()} miles</p>
-                          <p className="text-lg font-bold text-green-600">
-                            ${car.price.toLocaleString()}
+                          <p className="text-lg font-bold text-green-600">  ${car.price.toLocaleString()}
                           </p>
                         </div>
                       </div>
@@ -173,6 +172,49 @@ export default function SectionTwo() {
           />
         ))}
       </section>
+      
+      <section className=" mt-10 h-auto">
+          <div className="grid grid-cols-2 ">
+           <div className=" rounded-xl mt-2 ml-2 h-[700px] w-[500px]">
+                          <div className="relative h-[700px] w-[500px]">
+            <Image src="/images/keys-1.jpg" alt="Keys" fill   className="rounded-xl object-cover" />
+             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center ">
+             <p className="text-5xl pt-20 text-black"></p>
+             </div>
+            </div>
+           </div>
+           <div className=" grid grid-rows-2 -ml-96">
+            <div className=" grid grid-cols-2 mt-2 ">
+            <div className="h-[300px] w-[670px] rounded-xl " >
+                          <div className="relative h-[300px] w-[670px]">
+            <Image src="/images/handing-docs.jpg" alt="Keys" fill   className="rounded-xl object-cover" />
+             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center ">
+             <p className="text-5xl pt-20 text-black"></p>
+             </div>
+            </div>
+
+            </div>
+            <div className="h-[300px] w-[600px] rounded-xl ml-9 ">
+                           <div className="relative h-[300px] w-[600px]">
+            <Image src="/images/motocycles.jpg" alt="Keys" fill  className="rounded-xl object-cover" />
+             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center ">
+             <p className="text-5xl pt-20 text-black"></p>
+             </div>
+            </div>
+            </div>
+           </div>
+           <div className=" h-[394px] w-full  -mt-10 -ml-1 rounded-xl">
+                   <div className="relative h-[394px] w-full">
+            <Image src="/images/customer.jpeg" alt="Keys" fill  className="rounded-xl object-cover " />
+             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center ">
+             <p className="text-5xl pt-20 text-black"></p>
+             </div>
+            </div>
+
+           </div>
+           </div>
+          </div>
+        </section>
     </div>
   );
 }

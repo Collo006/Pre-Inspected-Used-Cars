@@ -36,6 +36,20 @@ export type SpecialCarDealData={
     special_car_deals: SpecialCarDeal[];
 }
 
+export type SUVPickup={
+    id:string;
+    model:string;
+    year:string;
+    price:string;
+    mileage:string;
+    image:string;
+}
+
+export type SUVPickupData={
+    suv_pickups: SUVPickup[];
+}
+
+
 export type UnitCarData={
     id:string
     unit_car:{

@@ -24,8 +24,8 @@ export default function ImageSlider() {
 
   return (
     <div
-      className="relative overflow-hidden "
-      style={{ width: 1810, height: 600 }}
+      className="relative overflow-hidden w-full "
+      style={{  height: 600 }}
     >
       {/* Images */}
       {images.map((src, index) => (
