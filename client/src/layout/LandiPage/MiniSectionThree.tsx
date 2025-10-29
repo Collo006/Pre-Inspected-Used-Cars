@@ -10,8 +10,16 @@ const images = [
 
 ];
 
+const words= [
+  "STEP 1: Share Your Contact and Car Details",
+  "STEP 2: Upload Your Documents and Images",
+  "STEP 3: Wait For Validation",
+  "Your Car Is Now Ready For The Market"
+]
+
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentWord,setCurrentWord]=  useState(0);
 
   // Auto change image every 4 seconds
   useEffect(() => {
@@ -24,11 +32,20 @@ export default function ImageSlider() {
     return () => clearInterval(interval); //Cleans up the interval when the component unmounts (or if the effect re-runs). Prevents memory leaks and duplicate timers.
   }, []);
 
+  useEffect(()=>{
+  const interval = setInterval(()=>{
+    setCurrentWord((prev)=> prev === words.length-1 ? 0: prev +1);
+  },3000)
+    return () => clearInterval(interval);
+  },[])
+
+
   return (
     <div
       className="relative overflow-hidden w-full"
-      style={{ height: 700 }}
+      style={{ height: 500 }}
     >
+     
       {/* Images */}
       {images.map((src, index) => (
         <div
@@ -37,13 +54,24 @@ export default function ImageSlider() {
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >{/** used to change the opacity based on the currently active image, relative so absolutely positioned children (slides) can be placed inside. */}
-          <Image
+        {words.map((word,index)=>(
+          <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${index===currentWord ? "opacity-100" : "opacity-0"}`}>
+                <div className="relative w-full h-[500px]"> {/** to place a text over an image */}
+                    <Image
             src={src}
             alt={`Slide ${index + 1}`}
             fill
             className="object-cover "
             loading="eager"
           />
+          <div className="absolute top-3/4 left-16 transform-translate-x-1/2 -translate-y-1/2 text-white text-center">
+           <p className="text-5xl pt-20 text-white">{word}</p>
+          </div>
+        </div>
+          </div>
+        ))}
+     
+
         </div>
       ))}
 
@@ -59,5 +87,6 @@ export default function ImageSlider() {
         ))}
       </div>
     </div>
+ 
   );
 }

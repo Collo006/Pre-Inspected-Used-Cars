@@ -183,10 +183,10 @@ export default function SectionTwo() {
              </div>
             </div>
            </div>
-           <div className=" grid grid-rows-2 -ml-96">
+           <div className=" grid grid-rows-2 -ml-80">
             <div className=" grid grid-cols-2 mt-2 ">
-            <div className="h-[300px] w-[670px] rounded-xl " >
-                          <div className="relative h-[300px] w-[670px]">
+            <div className="h-[300px] w-[600px] rounded-xl " >
+                          <div className="relative h-[300px] w-[600px]">
             <Image src="/images/handing-docs.jpg" alt="Keys" fill   className="rounded-xl object-cover" />
              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center ">
              <p className="text-5xl pt-20 text-black"></p>
@@ -194,8 +194,8 @@ export default function SectionTwo() {
             </div>
 
             </div>
-            <div className="h-[300px] w-[600px] rounded-xl ml-9 ">
-                           <div className="relative h-[300px] w-[600px]">
+            <div className="h-[300px] w-[550px] rounded-xl ml-7 ">
+                           <div className="relative h-[300px] w-[550px]">
             <Image src="/images/motocycles.jpg" alt="Keys" fill  className="rounded-xl object-cover" />
              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center ">
              <p className="text-5xl pt-20 text-black"></p>
