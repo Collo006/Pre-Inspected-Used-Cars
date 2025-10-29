@@ -10,6 +10,7 @@ import SectionOne from "@/layout/LandiPage/SectionOne";
 import SectionTwo from "@/layout/LandiPage/SectionTwo";
 import SectionThree from "@/layout/LandiPage/SectionThree";
 import SectionFour from "@/layout/LandiPage/SectionFour";
+import Footer from "@/layout/Footer";
 
 const GET_CARS = gql `query CarsQuery {
   cars{
@@ -41,6 +42,7 @@ export default function Home() {
     <SectionThree/>
     <SectionFour/>
   </div>
+  <Footer/>
 </div>
   );
 }
