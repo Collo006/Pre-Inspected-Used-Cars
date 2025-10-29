@@ -54,6 +54,7 @@ type CarSpecification{
     cars:[Car]
 }
 type CarHistory{
+    id:String!
     insurance_write_off:String!
     not_scrapped:String!
     not_stolen:String!
@@ -65,6 +66,7 @@ type CarHistory{
     cars:[Car]
 }
 type Interior{
+    id:String!
     seats:String!
     dashboard:String!
     roof:String!
@@ -76,6 +78,7 @@ type Interior{
     cars:[Car]
 }
 type Exterior{
+    id:String!
     doors:String!
     paint:String!
     wipers:String!
@@ -88,6 +91,7 @@ type Exterior{
     cars:[Car]
 }
 type Suspension{
+    id:String!
     ball_joints:String!
     arms_suspension:String!
     shock_absorbers:String!
@@ -99,16 +103,23 @@ type Suspension{
     cars:[Car]
 }
 type Accessories{
+    id:String!
     jack_spanner:String!
     spare_wheel:String!
     cars:[Car]
 }
 type Tires{
+    id:String!
     left_front:String!
     right_front:String!
     left_rear:String!
     right_rear:String!
     cars:[Car]
+}
+type Reviews{
+    id:String!
+    name: String!
+    comment:String!
 }
 type Query{
     cars:[Car]
@@ -133,6 +144,9 @@ type Query{
     specific_car_accessory(id:ID!):Accessories
     tire:[Tires]
     specific_car_tire(id:ID!):Tires
+    review:[Reviews]
+    specific_person_review(id:ID!):Reviews
+
     
 }
 `

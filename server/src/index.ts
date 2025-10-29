@@ -42,6 +42,9 @@ const resolvers={
         tire(){
             return _db.tire
         },
+        review(){
+            return _db.review
+        },
         specific_car(_,args){
             return _db.cars.find((car)=>car.id === args.id)
         },
@@ -74,7 +77,11 @@ const resolvers={
         },
         specific_car_tire(_,args){
             return _db.tire.find((car)=> car.id===args.id)
+        },
+        specific_person_review(_,args){
+            return _db.review.find((car)=> car.id===args.id)
         }
+       
      },
      CarSpecification:{
         cars(parent:any){

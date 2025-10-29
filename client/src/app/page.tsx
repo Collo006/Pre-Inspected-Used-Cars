@@ -9,6 +9,7 @@ import ImageSlider from "@/components/ImageSlider";
 import SectionOne from "@/layout/LandiPage/SectionOne";
 import SectionTwo from "@/layout/LandiPage/SectionTwo";
 import SectionThree from "@/layout/LandiPage/SectionThree";
+import SectionFour from "@/layout/LandiPage/SectionFour";
 
 const GET_CARS = gql `query CarsQuery {
   cars{
@@ -38,6 +39,7 @@ export default function Home() {
     <SectionOne/>
     <SectionTwo/>
     <SectionThree/>
+    <SectionFour/>
   </div>
 </div>
   );

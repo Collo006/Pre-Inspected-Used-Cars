@@ -109,7 +109,7 @@ export default function SectionTwo() {
           </svg>
         </button>
 
-        {/* ✅ Edge-to-edge full-width container */}
+        {/*  Edge-to-edge full-width container */}
         <div ref={scrollContainerRef} className="overflow-hidden w-full">
           <div className="flex w-full">
             {Array.from({ length: totalSlides }).map((_, slideIndex) => {

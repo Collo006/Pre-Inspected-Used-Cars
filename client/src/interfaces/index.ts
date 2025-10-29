@@ -49,6 +49,15 @@ export type SUVPickupData={
     suv_pickups: SUVPickup[];
 }
 
+export type Reviews={
+    id:string;
+    name:string;
+    comment:string;
+}
+
+export type ReviewsData={
+   review:Reviews[];
+}
 
 export type UnitCarData={
     id:string

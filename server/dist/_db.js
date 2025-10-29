@@ -169,4 +169,12 @@ let tire = [
     { id: "5", left_front: "good condition", right_front: "good condition", left_rear: "bad condition", right_rear: "bad condtion" },
     { id: "6", left_front: "good condition", right_front: "good condition", left_rear: "bad condition", right_rear: "bad condtion" },
 ];
-export default { cars, carspecifications, carshistory, interiors, exteriors, suspensions, accessory, tire, newarrivals, special_car_deals, suv_pickups };
+let review = [
+    { id: "1", name: "Collins", comment: "PINUC seriously helped me with my car deal. Anyone looking to get a car should just use it" },
+    { id: "2", name: "Jane", comment: "PINUC seriously helped me with my car deal. Anyone looking to get a car should just use it" },
+    { id: "3", name: "Dorris", comment: "PINUC seriously helped me with my car deal. Anyone looking to get a car should just use it" },
+    { id: "4", name: "Daisy", comment: "PINUC seriously helped me with my car deal. Anyone looking to get a car should just use it" },
+    { id: "5", name: "James", comment: "PINUC seriously helped me with my car deal. Anyone looking to get a car should just use it" },
+    { id: "6", name: "Mike", comment: "PINUC seriously helped me with my car deal. Anyone looking to get a car should just use it" },
+];
+export default { cars, carspecifications, carshistory, interiors, exteriors, suspensions, accessory, tire, newarrivals, special_car_deals, suv_pickups, review };
