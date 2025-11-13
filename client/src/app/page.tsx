@@ -2,8 +2,7 @@
 
 import { useQuery } from "@apollo/client/react";
 import { gql } from "@apollo/client";
-import { Car,CarsData } from "../interfaces";
-import Image from "next/image";
+import { CarsData } from "../interfaces";
 import Header from "@/layout/Header";
 import ImageSlider from "@/components/ImageSlider";
 import SectionOne from "@/layout/LandiPage/SectionOne";

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ApolloWrapper from "@/components/ApolloWrapper";
+import Head from "next/head";
 
 
 export const metadata: Metadata = {
@@ -16,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+      </Head>
       <body>
         <ApolloWrapper>
             {children}

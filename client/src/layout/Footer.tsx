@@ -1,8 +1,8 @@
 export default function Footer(){
     return (
-        <div className="border border-red-600 mt-10 w-full">
-         <div className="border border-green-700 grid grid-cols-4 text-center">
-            <div>
+        <div className="bg-black mt-10 w-full">
+         <div className=" grid grid-cols-4 text-center leading-12 text-white">
+            <div className="">
                 <h2>PRODUCTS</h2>
                 <p>USED CARS</p>
                 <p>SELL YOUR CAR</p>
@@ -24,12 +24,12 @@ export default function Footer(){
                 <p>TEAM</p>
             </div>
          </div>
-         <div className="border border-red-600 grid grid-rows-2">
-           <div >
-            
+         <div className=" grid grid-rows-2">
+           <div className="" >
+            <i className="fa-regular fa-heart border border-yellow-300 rounded-xl ml-10"></i>
            </div>
-           <div className="text-center">
-            <p> &copy;<sup>TM</sup>PINUC.All rights reserved. Vehicle photos PINUC images 2025</p>
+           <div className="text-center text-white">
+            <p> &copy; <sup>TM</sup> PINUC.All rights reserved. Vehicle photos PINUC images 2025</p>
            </div>
          </div>
         </div>
