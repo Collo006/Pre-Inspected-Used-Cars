@@ -10,6 +10,9 @@ import SectionTwo from "@/layout/LandiPage/SectionTwo";
 import SectionThree from "@/layout/LandiPage/SectionThree";
 import SectionFour from "@/layout/LandiPage/SectionFour";
 import Footer from "@/layout/Footer";
+import { auth } from "../../lib/auth";
+import { useRouter } from "next/navigation";
+import { signOut } from "../../lib/actions/auth-actions";
 
 const GET_CARS = gql `query CarsQuery {
   cars{
@@ -22,6 +25,7 @@ const GET_CARS = gql `query CarsQuery {
 `
 
 export default function Home() {
+
 
   const{data,error,loading}= useQuery<CarsData>(GET_CARS)
 

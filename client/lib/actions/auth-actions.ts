@@ -13,7 +13,7 @@ export const signUp= async(email:string, name:string, password:string)=>{
             email,
             name,
             password,
-            callbackURL:""
+            callbackURL:"/home"
         }
     });
     return result
@@ -24,7 +24,7 @@ export const signIn= async(email:string, password:string)=>{
         body:{
             email,
             password,
-            callbackURL:""
+            callbackURL:"/home"
         }
     });
     return result;
@@ -34,7 +34,7 @@ export const signInSocial= async(provider: "github" | "google")=>{
     const {url}= await auth.api.signInSocial({
         body:{
             provider,
-            callbackURL:""
+            callbackURL:"/home"
         }
     });
     if(url){
