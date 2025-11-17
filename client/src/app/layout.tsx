@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ApolloWrapper from "@/components/ApolloWrapper";
 import Head from "next/head";
-
+import Header from "@/layout/Header";
 
 export const metadata: Metadata = {
   title: "Pre-Inspected Used Cars",
@@ -10,17 +10,22 @@ export const metadata: Metadata = {
 };
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+
+
+
   return (
     <html lang="en">
       <Head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
       </Head>
       <body>
+         <Header></Header>
         <ApolloWrapper>
             {children}
         </ApolloWrapper>

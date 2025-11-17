@@ -1,20 +1,44 @@
-'use client';
+"use client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { signOut } from "../../lib/actions/auth-actions";
+import { useSession } from "../../lib/actions/createAuthClient";
 
-import Link from 'next/link'
+export default function Header() {
+  const { data: session, isPending } = useSession();  // ← BetterAuth hook
+  const router = useRouter();
 
-export default function Header(){
- 
+  const handleSignOut = async () => {
+    await signOut();
+    router.refresh(); // refresh UI
+    router.push("/SignUp");
+  };
 
-
-return(
+  return (
     <header className="bg-gray-600 text-amber-50 h-14 ">
-            <ul className="flex justify-evenly pt-4 ">
-                <li className="cursor-pointer">Logo</li>
-                <li className="cursor-pointer">Buy</li>
-                <li className="cursor-pointer">Sell</li>
-                <li className="cursor-pointer">About</li>
-              <li className="cursor-pointer" ><Link href="/SignUp">Sign Up</Link></li>
-            </ul>
+      <ul className="flex justify-evenly pt-4 ">
+        <li>Logo</li>
+        <li>Buy</li>
+        <li>Sell</li>
+        <li>About</li>
+
+        {/* While loading, avoid flickering */}
+        {isPending ? null : (
+          <>
+            {!session && (
+              <li>
+                <Link href="/SignUp">Sign Up</Link>
+              </li>
+            )}
+
+            {session && (
+              <li onClick={handleSignOut} className="cursor-pointer">
+                Sign Out
+              </li>
+            )}
+          </>
+        )}
+      </ul>
     </header>
-)
+  );
 }

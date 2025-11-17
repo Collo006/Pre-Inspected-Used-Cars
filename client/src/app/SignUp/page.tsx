@@ -8,7 +8,7 @@ export default async function AuthPage() {
 const session = await auth.api.getSession({ headers: await headers()});
 
 if(session){
-  redirect('/home')
+  redirect('/dashboard')
 }
 
   return <SignUp/>;

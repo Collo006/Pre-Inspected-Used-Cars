@@ -4,55 +4,54 @@ import Image from "next/image";
 import Link from "next/link"; 
 import { useState } from "react";
 import { signIn, signInSocial, signUp } from "../../../lib/actions/auth-actions";
+import { useRouter } from "next/navigation";
+
 
 
 export default function SignUp(){
   
-const [isSignIn, setIsSignIn] =  useState(true);
-const [email,setEmail] =  useState("");
-const [password,setPassword] = useState("");
-const [name,setName] = useState("");
-const [isLoading,setIsLoading] = useState(false);
-const [error,setError] = useState(""); 
+  const router = useRouter();
+  const [isSignIn, setIsSignIn] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(""); 
 
-const handleSocialAuth= async (provider: "github" | "google")=>{
+  const handleSocialAuth = async (provider: "github" ) => {
     setIsLoading(true);
     setError("");
 
- try{
-    await signInSocial(provider)
- } catch (err){
-    setError( `Error authenticating with ${provider}: ${err instanceof Error ? err.message: "Uknown error"}`)
- }
+    try {
+      await signInSocial(provider);
+      // The redirect happens in the server action
+    } catch (err) {
 
-}
-
-const handleEmailAuth= async(e: React.FormEvent)=>{
-e.preventDefault();
-setIsLoading(true);
-setError("");
-
-try{
-   if(isSignIn){
-    const result = await signIn(email,password);
-    if(!result.user){
-        setError("Invalid email or password")
+      setError(`Error authenticating with ${provider}: ${err instanceof Error ? err.message : "Unknown error"}`);
+      setIsLoading(false);
     }
-   }else{
-    const result = await signUp(email,password,name);
-    if(!result.user){
-        setError("Failed to create account")
+
+  };
+
+  const handleEmailAuth = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
+
+    try {
+      if (isSignIn) {
+        await signIn(email, password);
+        // The redirect happens in the server action
+      } else {
+        await signUp(email, password, name);
+        // The redirect happens in the server action
+      }
+      router.push("/dashboard")
+    } catch (err) {
+      setError(`Authentication error: ${err instanceof Error ? err.message : "Unknown error"}`);
+      setIsLoading(false);
     }
-   }
-} catch (err) {
-    setError(
-        `Authentication error: ${
-        err instanceof Error ? err.message : "Uknown error"}`
-    );
-} finally {
-    setIsLoading(false)
-};
-};
+  };
 
     return(
         <div className=" grid grid-cols-2 pl-30">
@@ -131,7 +130,7 @@ try{
 
  {/** Social Authentication */}
            <div>
-            <button className="mt-2 ml-24 w-[450px] h-[50px] border border-gray-400 text-center rounded-xl cursor-pointer" onClick={()=>handleSocialAuth("google")} disabled={isLoading}> Google</button>
+      
             <button className="mt-2 ml-24 w-[450px] h-[50px] border border-gray-400 text-center rounded-xl cursor-pointer" onClick={()=>handleSocialAuth("github")} disabled={isLoading}> Github</button>
             </div>
 
