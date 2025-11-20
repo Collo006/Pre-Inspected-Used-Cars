@@ -1,7 +1,36 @@
 import { ReviewsData } from "@/interfaces"
 import { gql } from "@apollo/client"
 import { useQuery } from "@apollo/client/react"
+import { Delius_Unicase, Exo_2, Josefin_Sans, Saira, Ubuntu } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
+
+const ubuntuFont= Ubuntu({
+  subsets:["latin"],
+  weight:"400"
+})
+
+const josefinFont= Josefin_Sans({
+  subsets:["latin"],
+  weight:"300",
+
+})
+
+const deliusFont= Delius_Unicase({
+  subsets:["latin"],
+  weight:"700"
+})
+
+const exoFont= Exo_2({
+  subsets:["latin"],
+  weight:"500",
+
+})
+
+const sairaFont= Saira({
+  subsets:["latin"],
+  weight:"500",
+
+})
 
 const ALL_REVIEWS= gql `query ReviewsQuery{
     review{
@@ -48,21 +77,21 @@ if(!data?.review)return <p>No car data is available</p>
 
 
     return(
-         <div className=" mt-1 w-full ">
-          <div className="pt-10 w-full h-[300px] bg-black text-white">
-             <h1 className="text-5xl text-center">WHY PINUC?</h1>
+         <div className=" ml-10 w-[1600px] rounded-xl mt-5  ">
+          <div className="pt-10 w-[1600px] h-[300px] bg-skyBlue rounded-xl text-white text-center">
+             <h1 className={`text-5xl font-extrabold text-center ${ubuntuFont.className} `}>WHY PINUC?</h1>
              <div className=" grid grid-cols-3 mt-4 text-center">
                 <div className="">
-                    <h2 className="text-3xl">Transparent Pricing</h2>
+                    <h2 className={`text-3xl ${sairaFont.className}`}>Transparent Pricing</h2>
                     <p>No surprise here, see how much you pay on cars you like</p>
                 </div>
                                 <div className="">
-                    <h2 className="text-3xl">Transparent Pricing</h2>
+                    <h2 className={`text-3xl ${sairaFont.className}`}>Transparent Pricing</h2>
                     <p>No surprise here, see how much you pay on cars you like</p>
                 </div>
 
                               <div className="">
-                    <h2 className="text-3xl">Transparent Pricing</h2>
+                    <h2 className={`text-3xl ${sairaFont.className}`}>Transparent Pricing</h2>
                     <p>No surprise here, see how much you pay on cars you like</p>
                 </div>
 

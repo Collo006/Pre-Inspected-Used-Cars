@@ -1,8 +1,27 @@
 import { SpecialCarDealData } from "@/interfaces";
 import { gql } from "@apollo/client";
 import { useQuery } from "@apollo/client/react";
+import { Josefin_Sans,  Exo_2,  } from "next/font/google";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
+
+
+
+const josefinFont= Josefin_Sans({
+  subsets:["latin"],
+  weight:"300",
+
+})
+
+
+const exoFont= Exo_2({
+  subsets:["latin"],
+  weight:"500",
+
+})
+
+
+
 
 const SPECIAL_CARS = gql`
   query SpecialCarsQuery {
@@ -61,10 +80,10 @@ export default function SectionTwo() {
   const goToSlide = (index: number) => setCurrentSlide(index);
 
   return (
-    <div className="mt-20 py-10 bg-gray-50">
-      <section className="max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-center mb-10">
-          Special Car Deals
+    <div className="mt-5 ml-10 py-10 bg-white w-[1600px] rounded-xl">
+      <section className="max-w-7xl mx-auto px-4 ">
+        <h1 className={`text-5xl text-darkSky font-bold text-center mb-10 ${exoFont.className}`}>
+          SPECIAL CAR DEALS
         </h1>
       </section>
 
@@ -73,7 +92,7 @@ export default function SectionTwo() {
         {/* Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 z-10 transition"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-lightSky rounded-full p-3 shadow-lg hover:bg-skyBlue z-10 transition cursor-pointer"
         >
           <svg
             className="w-6 h-6 text-gray-700"
@@ -92,7 +111,7 @@ export default function SectionTwo() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 z-10 transition"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-lightSky rounded-full p-3 shadow-lg hover:bg-skyBlue z-10 transition cursor-pointer"
         >
           <svg
             className="w-6 h-6 text-gray-700"
@@ -127,7 +146,7 @@ export default function SectionTwo() {
                   {carsForThisSlide.map((car) => (
                     <div
                       key={car.id}
-                      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 w-[20%] min-w-[200px]"
+                      className="bg-lightSky rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 w-[20%] min-w-[200px]"
                     >
                       <div className="relative h-52">
                         <Image
@@ -138,13 +157,13 @@ export default function SectionTwo() {
                         />
                       </div>
                       <div className="p-4">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                        <h3 className={`text-lg mb-2 text-navyBlue text-bold ${josefinFont}`}>
                           {car.model}
                         </h3>
-                        <div className="space-y-1 text-sm text-gray-600">
+                        <div className={`space-y-1 text-sm text-navyBlue ${josefinFont}`}>
                           <p>Year: {car.year}</p>
                           <p>Mileage: {car.mileage.toLocaleString()} miles</p>
-                          <p className="text-lg font-bold text-green-600">  ${car.price.toLocaleString()}
+                          <p className={`text-lg font-bold text-navyBlue ${josefinFont}`}>  Ksh.{car.price.toLocaleString()}
                           </p>
                         </div>
                       </div>
@@ -173,7 +192,7 @@ export default function SectionTwo() {
         ))}
       </section>
       
-      <section className=" mt-10 h-auto">
+   {/*   <section className=" mt-10 h-auto">
           <div className="grid grid-cols-2 ">
            <div className=" rounded-xl mt-2 ml-2 h-[700px] w-[500px]">
                           <div className="relative h-[700px] w-[500px]">
@@ -214,7 +233,7 @@ export default function SectionTwo() {
            </div>
            </div>
           </div>
-        </section>
+        </section>*/}
     </div>
   );
 }

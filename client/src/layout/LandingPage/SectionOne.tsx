@@ -95,34 +95,34 @@ export default function SectionOne() {
                 {/* Right Details */}
                 <div className={`flex flex-col justify-center pl-6 w-[600px] ml-28 rounded-xl bg-white text-darkSky h-full ${josefinFont.className}`}>
                   <div className="-mt-20 text-center">
-                    <p className="text-center text-sm w-auto pt-14">Price</p>
+                    <p className="text-center text-xl font-extrabold w-auto ">Price</p>
                     <p className="text-center">
-                      <span className="text-6xl">{car.price}</span>
+                      <span className="text-6xl font-extrabold">KSH.{car.price}</span>
                     </p>
                   </div>
                   
-                  <div className="grid grid-cols-2 pt-10 pl-10">
-                    <div>
-                      <p className="text-sm w-auto pl-14">Mileage</p>
-                      <p><span className="text-6xl">{car.mileage}</span></p>
+                  <div className="grid  grid-cols-2  pl-10 ml-7 mt-5 gap-2 ">
+                    <div className=" h-[100px] text-center rounded-xl pt-5 bg-navyBlue">
+                      <p className="text-lg w-auto pl-1 ">Model</p>
+                      <p><span className="text-4xl font-extrabold">{car.model}</span></p>
                     </div>
                     
-                    <div>
-                      <p className="text-sm w-auto pl-28">Year</p>
-                      <p className="pl-16">
-                        <span className="text-6xl">{car.year}</span>
+                    <div className=" w-[150px] text-center rounded-xl pt-5 bg-navyBlue">
+                      <p className="text-lg w-auto pl-1">Year</p>
+                      <p className="pl-1">
+                        <span className="text-2xl">{car.year}</span>
                       </p>
                     </div>
                     
-                    <div>
-                      <p className="text-sm w-auto pt-10 pl-14">Engine Size</p>
-                      <p><span className="text-6xl">{car.engine_size}</span></p>
+                    <div className="w-[150px] text-center rounded-xl bg-navyBlue">
+                      <p className="text-lg w-auto pt-1 pl-1 ">Engine Size</p>
+                      <p><span className="text-3xl ">{car.engine_size}</span></p>
                     </div>
                     
-                    <div>
-                      <p className="pl-28 text-sm w-auto pt-10">Model</p>
-                      <p className="pl-16">
-                        <span className="text-6xl">{car.model}</span>
+                    <div className=" -ml-24 w-[247px] text-center rounded-xl bg-navyBlue">
+                      <p className="pl-1 text-lg w-auto pt-1">Milage</p>
+                      <p className="pl-1">
+                        <span className="text-4xl font-extrabold">{car.mileage}</span>
                       </p>
                     </div>
                   </div>

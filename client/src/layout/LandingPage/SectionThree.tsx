@@ -4,6 +4,22 @@ import { useQuery } from "@apollo/client/react";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import MiniSectionThree from "./MiniSectionThree";
+import { Josefin_Sans, Exo_2 } from "next/font/google";
+
+
+
+const josefinFont= Josefin_Sans({
+  subsets:["latin"],
+  weight:"300",
+
+})
+
+
+const exoFont= Exo_2({
+  subsets:["latin"],
+  weight:"500",
+
+})
 
 const SUV_PICKUPS = gql `query SuvPickupQuery{
     suv_pickups{
@@ -54,16 +70,16 @@ const prevSlide=()=> setCurrentSlide((prev)=> (prev-1 + totalSlides)% totalSlide
 const goToSlide = (index:number) => setCurrentSlide(index);
 
 return(
-    <div className="mt-20 py-10 bg-gray-50" >
+    <div className="mt-5 ml-10 py-10 bg-white w-[1600px] rounded-xl" >
         <section className="max-w-7xl mx-auto px-4">
-          <h1 className="text-3xl font-bold text-center mb-10">
-            SUVs and Pickups
+          <h1 className={`text-5xl text-darkSky font-bold text-center mb-10 ${exoFont.className}`}>
+            SUVs and PICKUPS
           </h1>
         </section>
        {/** scrollable area */} 
        <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw]">
         {/** Arrows */}
-        <button onClick={prevSlide} className="absolute left-4 top-1/2 transform-translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 z-10 transition">
+        <button onClick={prevSlide} className="absolute left-4 top-1/2 transform-translate-y-1/2 bg-lightSky rounded-full p-3 shadow-lg hover:bg-skyBlue z-10 transition cursor-pointer">
         <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
              <path
               strokeLinecap="round"
@@ -73,7 +89,7 @@ return(
             />
         </svg>
         </button>
-        <button onClick={nextSlide} className="absolute right-4 top-1/2 transform-translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 z-10 transition">
+        <button onClick={nextSlide} className="absolute right-4 top-1/2 transform-translate-y-1/2 bg-lightSky rounded-full p-3 shadow-lg hover:bg-skyBlue z-10 transition cursor-pointer">
          <svg
             className="w-6 h-6 text-gray-700"
             fill="none"
@@ -96,17 +112,17 @@ return(
             return (
                 <div key={slideIndex} className="shrink-0 w-full flex gap-4 px-6" style={{flex: "0 0 100%"}}>
                     {carsForThisSlide.map((car)=>(
-                        <div key={car.id}  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 w-[20%] min-w-[200px]">
+                        <div key={car.id}  className="bg-lightSky rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 w-[20%] min-w-[200px]">
                         <div className="relative h-52">
                         <Image src={car.image} alt={car.model} fill className="object-cover"/>
                         </div>
                         <div className="p-4">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-2">{car.model}</h3>
-            <div className="space-y-1 text-sm text-gray-600">
+                        <h3 className={`text-lg mb-2 text-navyBlue text-bold ${josefinFont}`}>{car.model}</h3>
+            <div className={`space-y-1 text-sm text-navyBlue ${josefinFont}`}>
              <p>Year:{car.year}</p>
              <p>Mileage:{car.mileage.toLocaleString()}miles</p>
-             <p className="text-lg font-bold text-green-600">
-                {car.price.toLocaleString()}
+             <p className={`text-lg font-bold text-navyBlue ${josefinFont}`}>
+                Ksh.{car.price.toLocaleString()}
              </p>
             </div>
             </div>
@@ -127,9 +143,9 @@ return(
           ))}
        </section>
 
-       <section className=" mt-10 h-auto">
+      {/** <section className=" mt-10 h-auto ">
         <MiniSectionThree/>
-       </section>
+       </section>*/} 
     </div>
 )
 

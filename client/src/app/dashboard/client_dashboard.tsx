@@ -7,6 +7,7 @@ import SectionThree from "@/layout/LandingPage/SectionThree";
 import SectionFour from "@/layout/LandingPage/SectionFour";
 import Footer from "@/layout/Footer";
 import { auth } from "../../../lib/auth";
+import MiniSectionThree from "@/layout/LandingPage/MiniSectionThree";
 
 const deliusFont= Delius_Unicase({
   subsets:["latin"],
@@ -31,6 +32,7 @@ export default function UserDashBoard({session}:{session: Session}) {
     <SectionOne/>
     <SectionTwo/>
     <SectionThree/>
+    <MiniSectionThree/>
     <SectionFour/>
   </div>
   <Footer/>
