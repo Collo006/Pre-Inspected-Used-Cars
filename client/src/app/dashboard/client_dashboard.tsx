@@ -1,14 +1,17 @@
 "use client"
-
+import { Delius_Unicase }  from "next/font/google"
 import ImageSlider from "@/components/ImageSlider";
-import SectionOne from "@/layout/LandiPage/SectionOne";
-import SectionTwo from "@/layout/LandiPage/SectionTwo";
-import SectionThree from "@/layout/LandiPage/SectionThree";
-import SectionFour from "@/layout/LandiPage/SectionFour";
+import SectionOne from "@/layout/LandingPage/SectionOne";
+import SectionTwo from "@/layout/LandingPage/SectionTwo";
+import SectionThree from "@/layout/LandingPage/SectionThree";
+import SectionFour from "@/layout/LandingPage/SectionFour";
 import Footer from "@/layout/Footer";
 import { auth } from "../../../lib/auth";
 
-
+const deliusFont= Delius_Unicase({
+  subsets:["latin"],
+  weight:"700"
+})
 
 type Session =typeof auth.$Infer.Session;
 export default function UserDashBoard({session}:{session: Session}) {
@@ -18,12 +21,12 @@ export default function UserDashBoard({session}:{session: Session}) {
 <div className=" w-auto">
  
   <div className="">
+    <div className="text-center mt-3 mb-2 ">
+    <p className= {`text-darkSky font-bold text-3xl ${deliusFont.className}`} >Welcome {user.name}! Let&apos;s find your Perfect Ride. </p>
+    </div>
 <ImageSlider/>
   </div>
-         <div className="text-sm border border-red-600 mt-10 ml-10">
-                    <p className="text-gray-900 font-medium">{user.name}</p>
-                    <p className="text-gray-500">{user.email}</p>
-                  </div>
+         
   <div>
     <SectionOne/>
     <SectionTwo/>

@@ -1,9 +1,37 @@
 import { useQuery } from "@apollo/client/react";
 import { gql } from "@apollo/client";
+import { Delius_Unicase, Exo_2, Josefin_Sans, Saira, Ubuntu } from "next/font/google";
 import { NewArrivalData } from "../../interfaces";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+const ubuntuFont= Ubuntu({
+  subsets:["latin"],
+  weight:"400"
+})
+
+const josefinFont= Josefin_Sans({
+  subsets:["latin"],
+  weight:"300",
+
+})
+
+const deliusFont= Delius_Unicase({
+  subsets:["latin"],
+  weight:"700"
+})
+
+const exoFont= Exo_2({
+  subsets:["latin"],
+  weight:"500",
+
+})
+
+const sairaFont= Saira({
+  subsets:["latin"],
+  weight:"500",
+
+})
 const GET_NEW_ARRIVALS = gql `query CarsQuery {
   newarrivals{
     id
@@ -40,9 +68,9 @@ export default function SectionOne() {
 
   return (
     <div>
-      <div className="mt-2">
-        <h1>NEW ARRIVALS</h1>
-        <p>Find Newly Posted Cars from approved sellers</p>
+      <div className={`mt-5 text-center text-2xl`}>
+        <h1  className={`${exoFont.className} text-4xl text-darkSky `}>NEW ARRIVALS</h1>
+        <p className={`${sairaFont.className} text-darkSky`}>Find Newly Posted Cars from approved sellers</p>
       </div>
       
       <section className="mt-2 w-full flex justify-center">
@@ -55,17 +83,17 @@ export default function SectionOne() {
             {data.newarrivals.map((car) => (
               <div key={car.id} className="shrink-0 w-full grid grid-cols-2">
                 {/* Left image */}
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full ml-24">
                   <Image 
                     src={car.image} 
                     alt={car.model} 
                     fill 
-                    className="object-cover rounded-l-lg"
+                    className="object-cover rounded-xl pl-1"
                   />
                 </div>
                 
                 {/* Right Details */}
-                <div className="flex flex-col justify-center p-6 bg-white h-full">
+                <div className={`flex flex-col justify-center pl-6 w-[600px] ml-28 rounded-xl bg-white text-darkSky h-full ${josefinFont.className}`}>
                   <div className="-mt-20 text-center">
                     <p className="text-center text-sm w-auto pt-14">Price</p>
                     <p className="text-center">

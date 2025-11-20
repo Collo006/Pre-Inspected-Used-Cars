@@ -24,7 +24,7 @@ export default async function RootLayout({
       <Head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
       </Head>
-      <body>
+      <body className="bg-lightGray">
          <Header></Header>
         <ApolloWrapper>
             {children}

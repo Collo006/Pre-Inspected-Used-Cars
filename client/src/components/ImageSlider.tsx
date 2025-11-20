@@ -26,6 +26,7 @@ export default function ImageSlider() {
     <div
       className="relative overflow-hidden w-full "
       style={{  height: 600 }}
+   
     >
       {/* Images */}
       {images.map((src, index) => (
@@ -39,7 +40,9 @@ export default function ImageSlider() {
             src={src}
             alt={`Slide ${index + 1}`}
             fill
-            className="object-cover"
+            className="object-cover "
+            id="image-blur-fade"
+            
           />
         </div>
       ))}
