@@ -7,7 +7,7 @@ export default function Home() {
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-indigo-50">
            
       {/* Hero Section */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+     { <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
      
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -302,10 +302,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </main>
+      </main> }
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 mt-20">
+    {/*  <footer className="bg-gray-900 text-white py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-4">Better-Auth Demo</h3>
@@ -335,7 +335,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
