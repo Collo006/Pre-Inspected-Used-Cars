@@ -86,16 +86,16 @@ export default function SignUp(){
   };
 
     return(
-        <div className=" grid grid-cols-2 pl-30">
-         <div className=" w-[700px] h-[600px] ml-24 pt-10 ">
-           <h1 className={`font-semi-bold text-6xl pb-10 ${ubuntuFont.className}`}>
+        <div className={` pl-30 min-h-screen bg-cover bg-center bg-no-repeat`} style={{ backgroundImage: "url('images/PORSCHE-1.jpg')" }}>
+         <div className=" w-[700px] h-[600px] mx-auto pt-10 ">
+           <h1 className={`font-semi-bold text-6xl pb-10 text-white ${ubuntuFont.className}`}>
             Signup to get the latest <br></br>update of available Cars
            </h1>
-           <p className={`text-2xl ${exoFont.className}`}>
+           <p className={`text-2xl text-white mb-4 ${exoFont.className}`}>
             Create a Free PINUC Account to get the best car deals in Town.<br></br></p>
    {/**Error Display */}
    {error && (
-    <div className="bg-red-50 border-red-200 rounded-lg p-4">
+    <div className="bg-red-50 border-red-200 rounded-lg p-4 mb-2">
         <div className="flex">
           <div className="shrink-0">
             <p className="text-sm text-red-800">{error}</p>
@@ -105,8 +105,8 @@ export default function SignUp(){
    )}
 
   {/** Email/Password Form */}
-
-           <form onSubmit={handleEmailAuth}>
+               
+           <form onSubmit={handleEmailAuth} className="border border-skyBlue/20 bg-white/10 backdrop-blur-md shadow-lg bg-clip-text pl-7 pb-10 rounded-xl text-white">
               {!isSignIn && (
             <div className=" pt-5 ">
                 <label htmlFor="name" className={`pl-2 text-lg ${sairaFont.className}`}> NAME</label>
@@ -123,7 +123,7 @@ export default function SignUp(){
                 <input id="password" name="password" type="password" autoComplete={isSignIn ? "current-password" : "new-password" } value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="Enter your Password"className={`w-[650px] h-[50px] border border-gray-600 pl-2 text-lg rounded-xl ${sairaFontTwo.className}`} />
             </div>
 
-            <button type="submit" disabled={isLoading} className={`cursor-pointer mt-4 w-[650px] flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors ${sairaFont.className}`}>
+            <button type="submit" disabled={isLoading} className={`cursor-pointer mt-4 w-[650px] flex justify-center py-3 px-4 border border-gray-600 rounded-lg shadow-sm text-lg font-medium text-white  hover:bg-mediumGray hover:text-skyBlue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 transition-colors ${sairaFont.className}`}>
                {isLoading ? (
                 <div className="flex items-center">
                   <svg
@@ -155,12 +155,12 @@ export default function SignUp(){
               )}
             </button>
            </form>
-           <p className={`pt-3 text-center text-lg ${exoFont.className}`}>Or Continue With </p>
+           <p className={`pt-3 text-center text-white text-lg ${exoFont.className}`}>Or Continue With </p>
 
  {/** Social Authentication */}
            <div>
       
-            <button className={`mt-2 ml-24 w-[450px] h-[50px] border border-gray-400 text-center text-lg rounded-xl cursor-pointer ${sairaFont.className}`} onClick={()=>handleSocialAuth("github")} disabled={isLoading}> Github</button>
+            <button className={`mt-2 ml-24 text-skyBlue w-[450px] h-[50px] border border-mediumGray bg-mediumGray text-center text-lg rounded-xl cursor-pointer ${sairaFont.className}`} onClick={()=>handleSocialAuth("github")} disabled={isLoading}> Github</button>
             </div>
 
             {/*Toggle between Sign In and Sign Up*/}
@@ -169,15 +169,12 @@ export default function SignUp(){
                 setIsSignIn(!isSignIn);
                 setError(""); //clear any previous errors
                 setName(""); //clear name when switching
-              }} className={`text-indigo-600 hover:text-indigo-500 text-lg font-medium transition-colors ${josefinFont.className}`}>
+              }} className={`text-white hover:text-skyBlue text-lg font-medium transition-colors ${josefinFont.className}`}>
                  {isSignIn ? "Don't have an account? Sign Up" : "Already have an account? Sign in"}
               </button>
             </div>
 
 
-         </div>
-         <div className="w-[410px] h-[810px] ml-96 relative ">
-            <Image src="/images/audi A8.jpg" alt="audi"  fill   className="object-cover" />
          </div>
         </div>
     )
