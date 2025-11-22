@@ -8,6 +8,7 @@ import SectionFour from "@/layout/LandingPage/SectionFour";
 import Footer from "@/layout/Footer";
 import { auth } from "../../../lib/auth";
 import MiniSectionThree from "@/layout/LandingPage/MiniSectionThree";
+import Header from "@/layout/Header";
 
 const deliusFont= Delius_Unicase({
   subsets:["latin"],
@@ -20,7 +21,8 @@ export default function UserDashBoard({session}:{session: Session}) {
 
   return (
 <div className=" w-auto">
- 
+    <Header></Header>
+
   <div className="">
     <div className="text-center mt-3 mb-2 ">
     <p className= {`text-darkSky font-bold text-3xl ${deliusFont.className}`} >Welcome {user.name}! Let&apos;s find your Perfect Ride. </p>

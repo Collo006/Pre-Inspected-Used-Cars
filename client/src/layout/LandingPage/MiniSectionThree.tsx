@@ -11,9 +11,9 @@ const deliusFont= Delius_Unicase({
 
 const images = [
   "/images/ford-1.jpg",
-  "/images/OLD-1.jpg",
-  "/images/VINTAGE-1.jpg",
-  "/images/VW-1.jpg"
+  "/images/OLD-1.1.jpg",
+  "/images/VW-1.jpg",
+  "/images/VINTAGE-1.1.jpg"
 
 ];
 

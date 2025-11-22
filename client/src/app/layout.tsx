@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ApolloWrapper from "@/components/ApolloWrapper";
 import Head from "next/head";
-import Header from "@/layout/Header";
 
 export const metadata: Metadata = {
   title: "Pre-Inspected Used Cars",
@@ -25,7 +24,6 @@ export default async function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
       </Head>
       <body className="bg-lightGray">
-         <Header></Header>
         <ApolloWrapper>
             {children}
         </ApolloWrapper>

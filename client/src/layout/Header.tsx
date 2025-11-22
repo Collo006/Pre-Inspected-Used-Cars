@@ -21,13 +21,13 @@ export default function Header() {
   const handleSignOut = async () => {
     await signOut();
     router.refresh(); // refresh UI
-    router.push("/SignUp");
+    router.push("/");
   };
 
   return (
     <header className=" text-skyBlue h-14 ">
       <ul className="flex justify-evenly pt-4 ">
-        <li className={`${exoFont.className} text-xl cursor-pointer`}>Logo</li>
+        <li className={`${exoFont.className} text-xl cursor-pointer`}><Link   href="/">Logo</Link></li>
         <li className={`${exoFont.className} text-xl cursor-pointer`}>Buy</li>
         <li className={`${exoFont.className} text-xl cursor-pointer`}>Sell</li>
         <li className={`${exoFont.className} text-xl cursor-pointer`}>About</li>
