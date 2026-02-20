@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // protected paths
-const protectedPaths = [
+/*const protectedPaths = [
   "/Buy",
   "/About",
   "/SellCarForm",
@@ -27,4 +27,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/Buy/:path*", "/About/:path*", "/SellCarForm/:path*"],};
+  matcher: ["/Buy/:path*", "/About/:path*", "/SellCarForm/:path*"],}; */
+
+// For now, let's just log the request to verify middleware is working
