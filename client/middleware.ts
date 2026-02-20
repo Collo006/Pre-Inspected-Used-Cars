@@ -1,32 +1,38 @@
-//import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { auth } from "./lib/auth"
 
-// protected paths
-/*const protectedPaths = [
-  "/Buy",
-  "/About",
-  "/SellCarForm",
-];
+//protected paths that reqiure authentication
+const protectedPaths=[
+    '/Buy',
+    '/About',
+    '/SellCarForm',
+    '/SignUp'
+]
 
-export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
+export async function middleware(request:NextRequest){
+    const session = await auth.api.getSession({
+        headers:request.headers
+    })
 
-  const isProtectedPath = protectedPaths.some((path) =>
-    pathname.startsWith(path)
-  );
+    const pathname= request.nextUrl.pathname
 
-  // Just check if session cookie exists
-  const sessionCookie = request.cookies.get("better-auth.session");
+    //check if the current path is in protectedPaths
+    const isProtectedPath= protectedPaths.some(path=>pathname.startsWith(path))
 
-  if (isProtectedPath && !sessionCookie) {
-    const signInUrl = new URL("/SignUp", request.url);
-    signInUrl.searchParams.set("callbackUrl", pathname);
-    return NextResponse.redirect(signInUrl);
-  }
-
-  return NextResponse.next();
+    //if it's a protcted path and no session exists,redirect to sign-in
+    if(isProtectedPath && !session){
+        const signInUrl=new URL('/SignUp',request.url)
+        signInUrl.searchParams.set('callbackUrl',pathname)
+        return NextResponse.redirect(signInUrl)
+    }
+    return NextResponse.next()
 }
-
-export const config = {
-  matcher: ["/Buy/:path*", "/About/:path*", "/SellCarForm/:path*"],}; */
-
-// For now, let's just log the request to verify middleware is working
+//configure which routes to run middleware on
+export const config ={
+    matcher:[
+      '/Buy',
+    '/About',
+    '/SellCarForm',
+    '/SignUp'
+    ]
+}
