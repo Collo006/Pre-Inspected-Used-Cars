@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 // protected paths
 const protectedPaths = [
-  "/dashboard/Buy",
-  "/dashboard/About",
-  "/dashboard/SellCarForm",
+  "/Buy",
+  "/About",
+  "/SellCarForm",
 ];
 
 export function middleware(request: NextRequest) {
@@ -28,8 +28,8 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/dashboard/Buy",
-    "/dashboard/About",
-    "/dashboard/SellCarForm",
+    "/Buy",
+    "/About",
+    "/SellCarForm",
   ],
 };
