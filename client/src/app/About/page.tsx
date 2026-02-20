@@ -8,6 +8,8 @@ import { IoPricetagOutline } from "react-icons/io5";
 import { MdSupportAgent } from "react-icons/md";
 import { LuChartNoAxesColumn } from "react-icons/lu";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaCarOn } from "react-icons/fa6";
+import { FaCarCrash } from "react-icons/fa";
 
 //bs
 
