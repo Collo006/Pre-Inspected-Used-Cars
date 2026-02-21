@@ -9,5 +9,8 @@ const nextConfig = {
     unoptimized: true, // If you have many images
   },
 }
-
-module.exports = nextConfig
+module.exports = {
+  trailingSlash: true,
+  nextConfig
+   // or false, but be consistent
+};
