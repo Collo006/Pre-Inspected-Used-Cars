@@ -35,6 +35,7 @@ export default function Home() {
  console.log("Home page rendered!");
 
   return (
+      <html >
     <div className="bg-white h-auto overflow-visible min-h-screen">
       {/*<Header/>*/}
 <main className={`flex-1 w-full overflow-visible`}>
@@ -205,5 +206,6 @@ FIND YOUR DREAM CAR TODAY
 </main>
 
 </div>
+</html>
   );
 }
