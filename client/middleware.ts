@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "./lib/auth"
 
 //protected paths that reqiure authentication
 const protectedPaths=[
@@ -10,17 +9,17 @@ const protectedPaths=[
 ]
 
 export async function middleware(request:NextRequest){
-    const session = await auth.api.getSession({
-        headers:request.headers
-    })
-
+  
     const pathname= request.nextUrl.pathname
 
     //check if the current path is in protectedPaths
     const isProtectedPath= protectedPaths.some(path=>pathname.startsWith(path))
 
+ // check if session cookie exists
+  const sessionCookie = request.cookies.get("better-auth.session_token");
+
     //if it's a protcted path and no session exists,redirect to sign-in
-    if(isProtectedPath && !session){
+    if(isProtectedPath && !sessionCookie){
         const signInUrl=new URL('/SignUp',request.url)
         signInUrl.searchParams.set('callbackUrl',pathname)
         return NextResponse.redirect(signInUrl)
