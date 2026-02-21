@@ -20,6 +20,7 @@ import { FaCarCrash } from "react-icons/fa";
 
 
 
+
 const sairaFont= Saira({
     subsets:["latin"],
     weight: "500",
@@ -57,6 +58,9 @@ const GET_CARS= gql `query CarsQuery{
 }`
 
 export default function Buy(){
+
+
+
 //category filter (useState to store the results/values of the current/typed search)
 const [search,setSearch]=useState("");
 const [selectedModel,setSelectedModel]=useState("");
