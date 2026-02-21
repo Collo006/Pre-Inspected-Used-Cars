@@ -32,7 +32,7 @@ const josefinFont= Josefin_Sans({
 
 export default function Home() {
 
-
+ console.log("Home page rendered!");
 
   return (
     <div className="bg-white h-auto overflow-visible min-h-screen">
