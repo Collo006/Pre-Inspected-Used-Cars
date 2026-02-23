@@ -1,4 +1,4 @@
-"use client"
+
 
 import { Josefin_Sans } from "next/font/google";
 import Link from "next/link";
@@ -133,9 +133,6 @@ FIND YOUR DREAM CAR TODAY
   <p className={`text-xs sm:text-lg ${exoFont.className} text-navyBlue`}>Explore our wide selection of high quality cars</p>
 </div>
 
-<div>
-  <BuySectionComponent/>
-</div>
 
 <div className={`w-[90%] sm:w-screen sm:mx-0 mx-auto  mt-5 mb-5   `}>
 <h2 className={`sm:text-5xl text-2xl text-center sm:pb-10 pb-1  ${josefinFont.className} text-navyBlue`}>PICK YOUR CAR</h2>
