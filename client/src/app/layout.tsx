@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ApolloWrapper from "@/components/ApolloWrapper";
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Pre-Inspected Used Cars",
@@ -20,9 +21,12 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="overflow-x-hidden bg-white">
-      <Head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-      </Head>
+     
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+      
+           <div style={{position: 'fixed', top: 0, left: 0, background: 'red', color: 'white', zIndex: 9999}}>
+          LAYOUT IS WORKING!
+        </div>
       <body className="bg-lightGray">
         <ApolloWrapper>
             {children}
