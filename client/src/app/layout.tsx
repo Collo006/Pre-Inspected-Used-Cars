@@ -16,7 +16,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
 
-
+ console.log('Layout rendering on:', typeof window === 'undefined' ? 'server' : 'client');
 
 
   return (
@@ -24,14 +24,19 @@ export default async function RootLayout({
      
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
       
-           <div style={{position: 'fixed', top: 0, left: 0, background: 'red', color: 'white', zIndex: 9999}}>
-          LAYOUT IS WORKING!
-        </div>
       <body className="bg-lightGray">
         <ApolloWrapper>
             {children}
         </ApolloWrapper>
-       
+         {/* Debug script */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            console.log('Client-side mount');
+            window.addEventListener('error', (e) => {
+              console.error('Caught error:', e.error);
+            });
+          `
+        }} />
       </body>
     </html>
   );

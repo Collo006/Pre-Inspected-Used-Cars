@@ -10,7 +10,8 @@
     "prisma:studio": "prisma studio",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+     "vercel-build": "next build"
   },
   "dependencies": {
     "@apollo/client": "^4.0.7",
