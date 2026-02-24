@@ -4,8 +4,5 @@
       "preview": true,
       "production": true
     }
-  },
-  "buildCommand": "cd client && npm install && npm run build",
-  "installCommand": "cd client && npm install",
-  "outputDirectory": "client/.next"
+  }
 }
