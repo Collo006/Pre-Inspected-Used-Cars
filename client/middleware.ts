@@ -1,39 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
-import { auth } from "./lib/auth"
 
-//protected paths that reqiure authentication
-const protectedPaths=[
-    '/Buy',
-    '/About',
-    '/SellCarForm',
-    '/SignUp'
-]
+const protectedPaths = [
+  "/Buy",
+  "/About", 
+  "/SellCarForm",
+];
 
-export async function middleware(request:NextRequest){
-    const session = await auth.api.getSession({
-        headers:request.headers
-    })
+export async function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+  
+  // ADD THIS DEBUG LOG
+  console.log("🔍 MIDDLEWARE RUNNING ON:", pathname);
+  console.log("🍪 SESSION COOKIE:", request.cookies.get("better-auth.session_token") ? "EXISTS" : "MISSING");
+  
+  const isProtectedPath = protectedPaths.some((path) =>
+    pathname.startsWith(path)
+  );
+  
+  console.log("🛡️ IS PROTECTED PATH:", isProtectedPath);
 
-    const pathname= request.nextUrl.pathname
+  const sessionCookie = request.cookies.get("better-auth.session_token");
 
-    //check if the current path is in protectedPaths
-    const isProtectedPath= protectedPaths.some(path=>pathname.startsWith(path))
+  if (isProtectedPath && !sessionCookie && pathname !=='/') {
+    console.log("🚫 REDIRECTING TO SIGNUP FROM:", pathname);
+    const signInUrl = new URL("/SignUp", request.url);
+    signInUrl.searchParams.set("callbackUrl", pathname);
+    return NextResponse.redirect(signInUrl);
+  }
 
-    //if it's a protcted path and no session exists,redirect to sign-in
-    if(isProtectedPath && !session && pathname !== '/'){
-        const signInUrl=new URL('/SignUp',request.url)
-        signInUrl.searchParams.set('callbackUrl',pathname)
-        return NextResponse.redirect(signInUrl)
-    }
-    return NextResponse.next()
+  console.log("✅ ALLOWING ACCESS TO:", pathname);
+  return NextResponse.next();
 }
-//configure which routes to run middleware on
-export const config ={
-    matcher:[
-      '/Buy',
-    '/About',
-    '/SellCarForm',
-    '/SignUp',
-    '/'
-    ]
-}
+
+export const config = {
+  matcher: ["/Buy", "/About", "/SellCarForm"],
+};
