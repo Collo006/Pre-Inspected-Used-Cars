@@ -32,9 +32,9 @@ export default function Header() {
   };
 
   return (
-    <header className=" text-skyBlue sm:h-14 h-10  bg-transparent mt-1 rounded-4xl sm:w-auto w-auto ">
+    <header className="bg-transparent text-skyBlue sm:h-14 h-10 mt-1 rounded-4xl sm:w-auto w-auto ">
       <ul className="flex justify-end sm:pt-4 pt-2 ">
-        <li className={`${josefinFont.className}  sm:text-xl text-sm cursor-pointer hover:text-lightGray hover:border-darkSky hover:bg-darkSky transition-colors duration-300 w-[50px] h-[30px] rounded-4xl pl-4`}><Link   href="/dashboard">Logo</Link></li>
+        <li className={`${josefinFont.className}  sm:text-xl text-sm cursor-pointer hover:text-lightGray hover:border-darkSky hover:bg-darkSky transition-colors duration-300 w-[60px] h-[30px] rounded-4xl pl-1`}><Link   href="/dashboard">Logo</Link></li>
         <li className={`${josefinFont.className}  sm:text-xl text-sm cursor-pointer hover:text-lightGray hover:border-darkSky hover:bg-darkSky transition-colors duration-300 w-[50px] h-[30px] rounded-4xl pl-2`}><Link href="/Buy">Buy</Link></li>
         <li className={`${josefinFont.className}  sm:text-xl text-sm cursor-pointer hover:text-lightGray hover:border-darkSky hover:bg-darkSky transition-colors duration-300 w-[50px] h-[30px] rounded-4xl pl-2`}><Link href="/SellCarForm">Sell</Link></li>
         <li className={`${josefinFont.className} sm:text-xl text-sm cursor-pointer hover:text-lightGray hover:border-darkSky hover:bg-darkSky transition-colors duration-300 w-[70px] h-[30px] rounded-4xl pl-2`}><Link   href="/About">About</Link></li>
