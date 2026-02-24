@@ -1,9 +1,0 @@
-
-{
-  "git": {
-    "deploymentEnabled": {
-      "preview": true,
-      "production": true
-    }
-  }
-}
