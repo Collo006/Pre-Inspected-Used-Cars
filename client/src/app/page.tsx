@@ -93,7 +93,7 @@ FIND YOUR DREAM CAR TODAY
 
 </div>
 <div className="flex">
-<button className={`bg-darkSky text-white px-4 py-2 rounded-4xl sm:rounded-full text-xs sm:text-lg w-24 sm:w-28 sm:h-14 sm:mt-4 mt-2 h-10 cursor-pointer ${exoFont.className}`}><Link href="/SignUp">Sign Up</Link></button>
+<button className={`bg-darkSky animate-pulse text-white px-4 py-2 rounded-4xl sm:rounded-full text-xs sm:text-lg w-24 sm:w-28 sm:h-14 sm:mt-4 mt-2 h-10 cursor-pointer ${exoFont.className}`}><Link href="/SignUp">Sign Up</Link></button>
 <Link href="/About">
 <p className={`text-xs sm:text-lg px-4 py-2 sm:mt-4 mt-2 ml-1 pt-4 cursor-pointer ${exoFont.className}`}>Learn More</p>
 </Link>

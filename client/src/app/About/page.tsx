@@ -51,8 +51,8 @@ export default function About(){
         
             <div className={` grid sm:grid-cols-[1fr_600px] grid-cols-[1fr] gap-1 w-screen h-auto px-1 sm:px-5 sm:mb-0 `}>
              <div className={`mt-5`}>
-                <h2 className={`${josefinFont.className} sm:text-3xl sm:pt-16 pt-2 sm:pl-10 text-lg sm:text-darkSky text-darkSky `}>Our Mission In The Company</h2>
-                <p className={`sm:text-md text-sm  ${josefinFont.className} sm:pt-5 pt-2 sm:pl-10  text-navyBlue`}>There was something special about this little creature. Donna couldn&apos;t quite pinpoint what it was,but she knew with all her heart that it was true. It wasn&apos;t a matter of if she was going to try and save it, but a matter of how she was going to save it. He sat staring at the person in the train stopped at the station going in the opposite direction. She sat staring ahead, never noticing that she was being watched. Both trains began to move and he knew that in another timeline or in another universe, they had been happy together.</p>
+                <h2 className={`${josefinFont.className} sm:text-3xl sm:pt-16 pt-2 sm:pl-10 text-lg text-[#000000] `}>Our Mission In The Company</h2>
+                <p className={`sm:text-md text-sm  ${josefinFont.className} sm:pt-5 pt-2 sm:pl-10  text-[#000000]`}>There was something special about this little creature. Donna couldn&apos;t quite pinpoint what it was,but she knew with all her heart that it was true. It wasn&apos;t a matter of if she was going to try and save it, but a matter of how she was going to save it. He sat staring at the person in the train stopped at the station going in the opposite direction. She sat staring ahead, never noticing that she was being watched. Both trains began to move and he knew that in another timeline or in another universe, they had been happy together.</p>
              </div>
              <div className={` mt-5 h-auto `}>
                 <Image src="/images/handing-docs.jpg" alt="handing documents" className=" sm:w-[500px] sm:h-[400px] w-screen h-[200px] rounded-xl object-cover sm:pt-10  sm:pl-10" width={0} height={0}/>
@@ -60,16 +60,16 @@ export default function About(){
             </div> 
 
             <div className={`w-screen  sm:mt-10 mt-16  `}>
-              <h3 className={`${josefinFont.className} sm:text-3xl text-lg sm:text-darkSky text-darkSky text-center sm:mt-0 mt-5 `}>The Team Behind The Business </h3>
+              <h3 className={`${josefinFont.className} sm:text-3xl text-lg  text-[#000000] text-center sm:mt-0 mt-5 `}>The Team Behind The Business </h3>
               <div className={`flex sm:justify-center sm:gap-7 gap-1 px-1 `}>
                 <div className={`w-[300px]  h-auto `}>
                     <Image src="/images/handing-docs.jpg" alt="handing documents" className="rounded-xl object-cover  hover:shadow-xl shadow-lg" width={300} height={600} />
-                    <p className={`${josefinFont.className} sm:text-xl text-sm text-darkSky text-center pt-2 sm:pt-2 `}>Collins Tunge</p>
+                    <p className={`${josefinFont.className} sm:text-xl text-sm text-[#000000] text-center pt-2 sm:pt-2 `}>Collins Tunge</p>
                     <p className={`${exoFont.className} sm:text-lg text-sm text-newOrange text-center  `}>Sales Representative</p>
                 </div>
                 <div className={`w-[300px]  h-auto `}>
                     <Image src="/images/handing-docs.jpg" alt="handing documents" className="rounded-xl object-cover  hover:shadow-xl shadow-lg" width={300} height={600} />
-                    <p className={`${josefinFont.className} sm:text-xl text-sm text-darkSky text-center pt-2 sm:pt-2 `}>Joshua Omukhoko</p>
+                    <p className={`${josefinFont.className} sm:text-xl text-sm text-[#000000] text-center pt-2 sm:pt-2 `}>Joshua Omukhoko</p>
                     <p className={`${exoFont.className} sm:text-lg text-sm text-newOrange text-center  `}>Chief Executive Officer</p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function About(){
 
      <div className={` grid sm:grid-cols-[1fr_600px] grid-cols-[1fr] gap-1 w-screen h-[400px] mt-5 sm:mt-0 sm:px-5 px-1`}>
              <div className={``}>
-                <h2 className={`${josefinFont.className} sm:text-3xl sm:pt-16 sm:pl-10 text-lg sm:text-darkSky text-darkSky `}>We Provide The Best Automotive Deals</h2>
+                <h2 className={`${josefinFont.className} sm:text-3xl sm:pt-16 sm:pl-10 text-lg text-[#000000] `}>We Provide The Best Automotive Deals</h2>
                 <div className={`flex justify-start gap-1 sm:pl-10 pt-5`}>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center`}><IoPricetagOutline size="1.5em" className="text-darkSky sm:text-lg"/></div>
                   <p className={`${exoFont.className} sm:text-lg text-sm text-newOrange`}>Premium services beyond your expectation</p>
@@ -96,7 +96,7 @@ export default function About(){
              </div>
             </div> 
              
-            <h2 className={`${exoFont.className} sm:text-2xl text-xl text-darkSky font-bold text-center pt-1  mt-14 sm:mt-5`}>RECENT AUTOMOTIVE NEWS</h2>
+            <h2 className={`${exoFont.className} sm:text-2xl text-xl text-[#000000] font-bold text-center pt-1  mt-14 sm:mt-5`}>RECENT AUTOMOTIVE NEWS</h2>
 
             <div className={`bg-white w-screen sm:h-[500px] h-auto rounded-xl mt-5 sm:mt-10 sm:grid sm:grid-cols-[1fr_1fr_1fr] sm:gap-1 gap-5 grid grid-cols-[1fr] sm:px-10 px-1  `}>
                 <div className={`cursor-pointer  border border-lightSky rounded-xl hover:shadow-lg shadow-md`}>
