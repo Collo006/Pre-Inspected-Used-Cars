@@ -147,7 +147,7 @@ const filteredCars = data.cars.filter((car)=>{
 
     
             <div className={`mt-5 text-center  sm:text-2xl text-lg`}>
-                <h1 className={`${sairaFont.className} text-darkSky `}> Select Your Best Ride </h1>
+                <h1 className={`${sairaFont.className} text-[#000000] `}> Select Your Best Ride </h1>
             </div>
         <div className=" sm:px-1 " >
             {/*
