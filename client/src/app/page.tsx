@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image"; 
 import Header from "@/layout/Header";
 import { GrShieldSecurity, GrSettingsOption} from "react-icons/gr";
-import { FcApproval } from "react-icons/fc";
+import { SiTicktick } from "react-icons/si";
 import { Exo_2 } from "next/font/google";
 import { FaCar } from "react-icons/fa6";
 import { MdMiscellaneousServices } from "react-icons/md";
@@ -69,32 +69,34 @@ export default function Home() {
  
 <div className={` grid grid-cols-[1fr] gap-0 sm:grid-cols-[2fr_1fr] mt-2 sm:mt-10 w-screen sm:h-auto h-[400px] px-5  `}>
 <div className={`bg-white px-5  `}>
-<h2 className={`text-lg pt-2 sm:text-6xl ${josefinFont.className} text-navyBlue`}>
+<h2 className={`text-lg pt-2 sm:text-6xl ${josefinFont.className} text-[#000000]`}>
 FIND YOUR DREAM CAR TODAY
 </h2>
-<p className={`text-xs sm:text-lg pt-2 ${exoFont.className} text-navyBlue`}>This is a bunch of random text being used as a prototype to what is to be</p>
+<p className={`text-xs sm:text-lg pt-2 ${exoFont.className} text-[#000000]`}>Stop dreaming and start driving. Explore our hand-picked, pre-inspected vehicles <br/> waiting for you</p>
 <div className={`pt-2 flex mt-2`}>
 
 <div>
   <div className={`flex`}>
-<div className={`bg-skyBlue rounded-full w-5 h-5 sm:w-10 sm:h-10 flex items-center justify-center`}><FaCar className="text-white w-3 h-3 sm:w-6 sm:h-6" /></div>
-<p className={`text-xs sm:text-xl pl-1 ${exoFont.className} text-navyBlue`}>Quality Cars</p>
+<div className={`bg-lightSky rounded-full w-5 h-5 sm:w-10 sm:h-10 flex items-center justify-center`}><FaCar className="text-darkSky w-3 h-3 sm:w-6 sm:h-6" /></div>
+<p className={`text-xs sm:text-xl pl-1 ${exoFont.className} text-[#000000]`}>Quality Cars</p>
   </div>
 </div>
 
 <div>
   <div className={`flex ml-1`}>
-<div className="bg-skyBlue rounded-full w-5 h-5 sm:w-10 sm:h-10 flex items-center justify-center">
-  <MdMiscellaneousServices className="text-white w-3 h-3 sm:w-6 sm:h-6" />
+<div className="bg-lightSky rounded-full w-5 h-5 sm:w-10 sm:h-10 flex items-center justify-center">
+  <MdMiscellaneousServices className="text-darkSky w-3 h-3 sm:w-6 sm:h-6" />
 </div>
-<p className={`text-xs sm:text-xl pl-1 ${exoFont.className} text-navyBlue`}>Exception Services</p>
+<p className={`text-xs sm:text-xl pl-1 ${exoFont.className} text-[#000000]`}>Exception Services</p>
   </div>
 </div>
 
 </div>
 <div className="flex">
-<button className={`bg-blue-700 text-white px-4 py-2 rounded-4xl sm:rounded-full text-xs sm:text-lg w-24 sm:w-28 sm:h-14 sm:mt-4 mt-2 h-10 cursor-pointer ${exoFont.className}`}><Link href="/SignUp">Sign Up</Link></button>
+<button className={`bg-darkSky text-white px-4 py-2 rounded-4xl sm:rounded-full text-xs sm:text-lg w-24 sm:w-28 sm:h-14 sm:mt-4 mt-2 h-10 cursor-pointer ${exoFont.className}`}><Link href="/SignUp">Sign Up</Link></button>
+<Link href="/About">
 <p className={`text-xs sm:text-lg px-4 py-2 sm:mt-4 mt-2 ml-1 pt-4 cursor-pointer ${exoFont.className}`}>Learn More</p>
+</Link>
 </div>
 <div className={`bg-white sm:hidden block`}>
 <div className={`bg-white w-[300px] h-[250px] sm:w-[250px] sm:h-[250px] rounded-2xl mt-5 ml-1 mb-2 sm:ml-10 relative`}>
@@ -127,9 +129,9 @@ FIND YOUR DREAM CAR TODAY
 
 
 <div className={`mt-10 mx-auto text-center sm:w-[80%] w-[90%]  `}>
-  <p className={`text-xs sm:text-md ${exoFont.className} text-navyBlue`}>Discover</p>
-  <h1 className={`sm:text-5xl text-2xl ${josefinFont.className} text-navyBlue`}>FEATURED PROMINENTLY</h1>
-  <p className={`text-xs sm:text-lg ${exoFont.className} text-navyBlue`}>Explore our wide selection of high quality cars</p>
+  <p className={`text-xs sm:text-lg ${exoFont.className} text-[#000000]`}>Discover</p>
+  <h1 className={`sm:text-5xl text-2xl ${josefinFont.className} text-[#000000]`}>FEATURED PROMINENTLY</h1>
+  <p className={`text-xs sm:text-lg ${exoFont.className} text-[#000000]`}>Explore our wide selection of high quality cars</p>
 </div>
 
 <div>
@@ -137,35 +139,35 @@ FIND YOUR DREAM CAR TODAY
 </div>
 
 <div className={`w-[90%] sm:w-screen sm:mx-0 mx-auto  mt-5 mb-5   `}>
-<h2 className={`sm:text-5xl text-2xl text-center sm:pb-10 pb-1  ${josefinFont.className} text-navyBlue`}>PICK YOUR CAR</h2>
+<h2 className={`sm:text-5xl text-2xl text-center sm:pb-10 pb-1  ${josefinFont.className} text-[#000000]`}>PICK YOUR CAR</h2>
 <div className={`mt-5  mx-auto grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr_1fr] sm:gap-2 gap-2  sm:w-[80%] w-[90%]  h-auto`}>
-<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-navyBlue`}>
+<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000]`}>
 <div className={`text-center pt-1`}>
-<div className="bg-skyBlue rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
-  <GrShieldSecurity size="1.5em" className="text-white sm:text-3xl" />
+<div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
+  <GrShieldSecurity size="1.5em" className="text-darkSky sm:text-3xl" />
 </div><h4 className={`text-sm font-bold`}>Secure Delivery</h4>
-<p className={`text-sm`}>This is a bunch of random text being used as a prototype to what is to be</p>
-<p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-skyBlue rounded-full text-white`}>Learn More</p>
+<p className={`text-sm`}>Your car arrives exactly as advertised, or we make it right</p>
+<p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-darkSky rounded-full text-white`}>Learn More</p>
 
 </div>
 </div>
-<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-navyBlue`}>
+<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000]`}>
 <div className={`text-center pt-1`}>
-<div className="bg-skyBlue rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
-  <FcApproval size="1.5em" className="text-white sm:text-3xl" />
-</div><h4 className={`text-sm font-bold`}>Secure Delivery</h4>
-<p className={`text-sm`}>This is a bunch of random text being used as a prototype to what is to be</p>
-<p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-skyBlue rounded-full text-white`}>Learn More</p>
+<div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
+  <SiTicktick size="1.5em" className="text-darkSky sm:text-3xl" />
+</div><h4 className={`text-sm font-bold`}>Certified Excellence</h4>
+<p className={`text-sm`}>Every vehicle passes a rigorous inspection before it ever hits the lot</p>
+<p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-darkSky rounded-full text-white`}>Learn More</p>
 
 </div>
 </div>
-<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-navyBlue `}>
+<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000] `}>
 <div className={`text-center pt-1`}>
-<div className="bg-skyBlue rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
-  <GrSettingsOption size="1.5em" className="text-white sm:text-3xl" />
-</div><h4 className={`text-sm font-bold`}>Secure Delivery</h4>
-<p className={`text-sm`}>This is a bunch of random text being used as a prototype to what is to be</p>
-<p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-skyBlue rounded-full text-white`}>Learn More</p>
+<div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
+  <GrSettingsOption size="1.5em" className="text-darkSky sm:text-3xl" />
+</div><h4 className={`text-sm font-bold`}>Exceptional Service</h4>
+<p className={`text-sm`}>We handle the paperwork, history checks, and the details you just enjoy the drive</p>
+<p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-darkSky rounded-full text-white`}>Learn More</p>
 
 </div>
 </div>
@@ -187,11 +189,11 @@ FIND YOUR DREAM CAR TODAY
   {/* Text content centered */}
   <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
     <p className={`text-center sm:text-4xl text-xl font-bold text-white drop-shadow-xl ${josefinFont.className}`}>
-      FREE TEST DRIVE
+      TAKE THE WHEEL
     </p>
     
     <p className={`text-center sm:text-lg text-xs text-white mt-2 sm:mt-3 font-medium drop-shadow-lg max-w-[80%] bg-black/20 px-4 py-1 rounded-full ${exoFont.className}`}>
-      This is a bunch of random text being used as a prototype to what is to be
+      Schedule your zero-obligation test drive today
     </p>
   </div>
   
