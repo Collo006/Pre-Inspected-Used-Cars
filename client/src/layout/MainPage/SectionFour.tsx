@@ -4,8 +4,9 @@ import { useQuery } from "@apollo/client/react"
 import {  Josefin_Sans, Saira} from "next/font/google";
 import { useEffect, useState } from "react";
 import { Exo_2 } from "next/font/google";
-import { GrShieldSecurity, GrSettingsOption} from "react-icons/gr";
-import { FcApproval } from "react-icons/fc";
+import { TbHistoryToggle } from "react-icons/tb";
+import { IoPricetagsOutline } from "react-icons/io5";
+import { MdStarOutline } from "react-icons/md";
 
 
 
@@ -70,35 +71,32 @@ if(!data?.review)return <p>No car data is available</p>
 
 
       <div className={`w-[90%] sm:w-screen sm:mx-0 mx-auto  mt-5 mb-5   `}>
-      <h2 className={`sm:text-5xl text-2xl text-center sm:pb-10 pb-1 pt-5 ${josefinFont.className} text-skyBlue`}>WHY CHOOSE PINUC</h2>
+      <h2 className={`sm:text-5xl text-2xl text-center sm:pb-10 pb-1 pt-5 ${josefinFont.className} text-[#000000]`}>WHY CHOOSE PINUC</h2>
       <div className={`mt-5  mx-auto grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr_1fr] sm:gap-2 gap-2  sm:w-[80%] w-[90%]  h-auto`}>
       <div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-navyBlue`}>
       <div className={`text-center pt-1`}>
-      <div className="bg-skyBlue rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
-        <GrShieldSecurity size="1.5em" className="text-white sm:text-3xl" />
-      </div><h4 className={`text-sm font-bold`}>Secure Delivery</h4>
-      <p className={`text-sm`}>This is a bunch of random text being used as a prototype to what is to be</p>
-      <p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-skyBlue rounded-full text-white`}>Learn More</p>
+      <div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
+        <TbHistoryToggle  size="1.5em" className="text-darkSky sm:text-3xl" />
+      </div><h4 className={`text-sm font-bold`}>Comprehensive History</h4>
+      <p className={`text-sm`}>Accident reports, service records, and ownership history—fully uncovered so there are no surprises</p>
       
       </div>
       </div>
       <div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-navyBlue`}>
       <div className={`text-center pt-1`}>
-      <div className="bg-skyBlue rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
-        <FcApproval size="1.5em" className="text-white sm:text-3xl" />
-      </div><h4 className={`text-sm font-bold`}>Secure Delivery</h4>
-      <p className={`text-sm`}>This is a bunch of random text being used as a prototype to what is to be</p>
-      <p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-skyBlue rounded-full text-white`}>Learn More</p>
+      <div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
+        <IoPricetagsOutline size="1.5em" className="text-darkSky sm:text-3xl" />
+      </div><h4 className={`text-sm font-bold`}>No-Haggle Pricing</h4>
+      <p className={`text-sm`}>The price you see is the price you pay. Fair, transparent, and stress-free</p>
       
       </div>
       </div>
       <div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-navyBlue `}>
       <div className={`text-center pt-1`}>
-      <div className="bg-skyBlue rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
-        <GrSettingsOption size="1.5em" className="text-white sm:text-3xl" />
-      </div><h4 className={`text-sm font-bold`}>Secure Delivery</h4>
-      <p className={`text-sm`}>This is a bunch of random text being used as a prototype to what is to be</p>
-      <p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-skyBlue rounded-full text-white`}>Learn More</p>
+      <div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
+        <MdStarOutline  size="1.5em" className="text-darkSky sm:text-3xl" />
+      </div><h4 className={`text-sm font-bold`}>Detail Obsessed</h4>
+      <p className={`text-sm`}>We don't just sell every used car on the market. We hand-pick vehicles that meet our high standards for performance, condition, and value</p>
       
       </div>
       </div>
@@ -109,7 +107,7 @@ if(!data?.review)return <p>No car data is available</p>
           <div className="pt-10  w-full hidden sm:block ">
             <div className=" ">
 
-                <h2 className={`text-center sm:text-2xl text-xl text-darkSky ${sairaFont.className}`}>PINUC BUYERS AND SELLERS REVIEWS</h2>
+                <h2 className={`text-center sm:text-2xl text-xl text-[#000000] ${sairaFont.className}`}>PINUC BUYERS AND SELLERS REVIEWS</h2>
                 
                 {/** Carousel Container */}
        {/** Carousel Container */}

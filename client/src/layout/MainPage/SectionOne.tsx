@@ -69,9 +69,9 @@ export default function SectionOne() {
 
   return (
     <div >
-      <div className={`mt-5 text-center text-xl`}>
-        <h1  className={`${exoFont.className} sm:text-2xl text-darkSky  `}>NEW ARRIVALS</h1>
-        <p className={`${sairaFont.className} text-navyBlue`}>Find Newly Posted Cars from approved sellers</p>
+      <div className={`mt-5 text-center `}>
+        <h1  className={`${exoFont.className} sm:text-4xl text-[#000000]  `}>NEW ARRIVALS</h1>
+        <p className={`${sairaFont.className} text-[#000000] text-lg`}>Find Newly Posted Cars from approved sellers</p>
       </div>
       
       <section className="mt-2 w-full flex justify-center">
@@ -97,8 +97,8 @@ export default function SectionOne() {
                 </Link>
                 
                 {/* Right Details */}
-                <div className={`flex flex-col justify-center sm:pl-6 pl-0 sm:w-[600px] w-[400px] sm:ml-28 sm:rounded-xl  text-darkSky h-full ${josefinFont.className}`}>
-                  <div className="sm:-mt-20 -mt-46 -ml-6 text-center ">
+                <div className={`flex flex-col justify-center sm:pl-6 pl-0 sm:w-[600px] w-[400px] sm:ml-28 sm:rounded-xl   h-full ${josefinFont.className}`}>
+                  <div className="sm:-mt-20 -mt-46 -ml-6 text-center text-darkSky">
                     <p className="text-center text-xl font-extrabold w-auto ">Price</p>
                     <p className="text-center">
                       <span className="sm:text-5xl text-xl font-extrabold">KSH.{car.price}</span>
@@ -106,31 +106,31 @@ export default function SectionOne() {
                   </div>
                   
                   <div className="grid  grid-cols-2  sm:pl-10 pl-10 sm:ml-7 sm:mt-5 mt-1 gap-2 ">
-                    <div className=" h-[50px] sm:h-[100px] text-center rounded-xl sm:pt-5 pt-0 bg-navyBlue">
-                      <p className=""><FaCar size="1.5em" className="text-white sm:text-xl text-md mx-auto w-auto pl-1"/>
+                    <div className=" h-[50px] sm:h-[100px] text-center rounded-xl sm:pt-5 pt-0 bg-lightSky">
+                      <p className=""><FaCar size="1.5em" className="text-darkSky sm:text-xl text-md mx-auto w-auto pl-1"/>
                       </p>
-                      <p><span className="sm:text-2xl text-lg font-extrabold">{car.model}</span></p>
+                      <p><span className="sm:text-2xl text-lg font-extrabold text-darkSky">{car.model}</span></p>
                     </div>
                     
-                    <div className=" sm:w-[150px] w-[70px] text-center rounded-xl sm:pt-5 bg-navyBlue">
-                      <p className=""><FaCalendarDay size="1.5em" className="text-white sm:text-xl text-md mx-auto w-auto pl-1"/>
+                    <div className=" sm:w-[150px] w-[70px] text-center rounded-xl sm:pt-5 bg-lightSky">
+                      <p className=""><FaCalendarDay size="1.5em" className="text-darkSky sm:text-xl text-md mx-auto w-auto pl-1"/>
                       </p>                      
                       <p className="pl-1">
-                        <span className="sm:text-2xl text-lg">{car.year}</span>
+                        <span className="sm:text-2xl text-lg text-darkSky">{car.year}</span>
                       </p>
                     </div>
                     
-                    <div className="w-[150px] sm:h-[100px] h-[50px] text-center rounded-xl bg-navyBlue">
-                      <p className=""><PiEngineBold size="1.5em" className="text-white sm:text-xl text-md mx-auto w-auto pl-1 sm:mt-5 mt-1"/>
+                    <div className="w-[150px] sm:h-[100px] h-[50px] text-center rounded-xl bg-lightSky">
+                      <p className=""><PiEngineBold size="1.5em" className="text-darkSky sm:text-xl text-md mx-auto w-auto pl-1 sm:mt-5 mt-1"/>
                       </p>                       
-                      <p><span className="sm:text-3xl text-md">{car.engine_size}</span></p>
+                      <p><span className="sm:text-3xl text-md text-darkSky">{car.engine_size}</span></p>
                     </div>
                     
-                    <div className=" sm:-ml-24 -ml-7 sm:w-[247px] w-[100px] text-center rounded-xl bg-navyBlue">
-                      <p className=""><SlSpeedometer size="1.5em" className="text-white sm:text-xl text-md mx-auto w-auto pl-1 sm:mt-5 mt-1"/>
+                    <div className=" sm:-ml-24 -ml-7 sm:w-[247px] w-[100px] text-center rounded-xl bg-lightSky">
+                      <p className=""><SlSpeedometer size="1.5em" className="text-darkSky sm:text-xl text-md mx-auto w-auto pl-1 sm:mt-5 mt-1"/>
                       </p>                       
                       <p className="pl-1">
-                        <span className="sm:text-2xl text-md font-extrabold">{car.mileage} Km</span>
+                        <span className="sm:text-2xl text-md font-extrabold text-darkSky">{car.mileage} Km</span>
                       </p>
                     </div>
                   </div>

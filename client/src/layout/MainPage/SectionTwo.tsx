@@ -95,7 +95,7 @@ export default function SectionTwo() {
     <div className="mt-5 sm:ml-0 ml-0 py-10 bg-white sm:w-screen w-full ">
       <section className="max-w-7xl mx-auto px-4 ">
         <h1
-          className={`sm:text-2xl text-2xl text-darkSky font-bold text-center mb-10 ${exoFont.className}`}
+          className={`sm:text-2xl text-2xl text-[#000000] font-bold text-center mb-10 ${exoFont.className}`}
         >
           SPECIAL CAR DEALS
         </h1>
