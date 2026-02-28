@@ -123,8 +123,8 @@ const filteredTiresItems = filterItems(tiresItems);
 
 
   return (
-    <div className={`bg-white`}>
-            <div className="bg-transparent w-screen sm:h-[400px] h-[300px]  relative z-10">
+    <main className={`bg-white`}>
+            <header className="bg-transparent w-screen sm:h-[400px] h-[300px]  relative z-10">
                         <Image src={car.image} alt="front"  fill priority  className="object-cover " />
                           <div className="absolute inset-0 bg-black/30 z-0"></div>
       
@@ -132,14 +132,14 @@ const filteredTiresItems = filterItems(tiresItems);
                         <div className="flex justify-between sm:justify-end sm:flex-row  sm:gap-4 sm:pr-28 pr-3">
                           <Header/>
                 </div>                       
-                    <p className={`${josefinFont.className} sm:text-4xl text-lg sm:text-white text-white sm:pt-6 `}><span >{car.unit_car.year} {car.model} </span></p>
-                    <p className={` sm:text-6xl pt-5 text-4xl font-bold ${josefinFont.className} sm:text-white text-white`}>KSH.{car.unit_car.price}</p>
+                    <h1 className={`${josefinFont.className} sm:text-4xl text-lg sm:text-white text-white sm:pt-6 `}><span >{car.unit_car.year} {car.model} </span></h1>
+                    <h1 className={` sm:text-6xl pt-5 text-4xl font-bold ${josefinFont.className} sm:text-white text-white`}>KSH.{car.unit_car.price}</h1>
                   </div>   
       
-                  </div>
+                  </header>
 
       {/**Showcase Images */}
-      <div className="w-screen sm:px-10  px-1 bg-[#fff]  ml-0 "> 
+      <section className="w-screen sm:px-10  px-1 bg-[#fff]  ml-0 "> 
           <div className={`sm:grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr] sm:gap-1 mt-5   `}>
             <div className={` sm:mb-10 mb-2 relative h-[450px] `}>
           <Image src={car.specific_car_exterior.left} alt="left"  fill priority  className="object-cover w-[300px] h-[500px] "/>
@@ -155,11 +155,11 @@ const filteredTiresItems = filterItems(tiresItems);
               </div>
             </div>
           </div>
-      </div>
+      </section>
       <hr className={`mx-7  text-lightSky`}/>
       
       {/**Specifications */}
-      <div className={`w-screen sm:px-10  bg-[#fff] mt-1  ml-0`}>
+      <section className={`w-screen sm:px-10  bg-[#fff] mt-1  ml-0`}>
        <div className={`bg-white text-navyBlue rounded-lg sm:p-5 sm:mb-1 mb-5 sm:flex sm:justify-evenly grid grid-cols-[1fr_1fr]  ${josefinFont.className}`}>
         <div className={`grid grid-cols-[50px_150px]`}>
         <div className={` flex items-center justify-center `}><SlSpeedometer className="text-darkSky sm:text-3xl text-xl"/></div>
@@ -198,18 +198,18 @@ const filteredTiresItems = filterItems(tiresItems);
         </div>
       
        </div>
-       </div>
+       </section>
 <hr className={`mx-7 text-lightSky`}/>
-      <div className="mt-5 grid grid-cols-1 sm:grid-cols-[1.5fr_1fr] h-auto  "> 
+      <section className="mt-5 grid grid-cols-1 sm:grid-cols-[1.5fr_1fr] h-auto  "> 
         <div className={` h-auto`}>
              {/*About*/}
-        <h1 className={`sm:text-xl text-lg font-bold  mb-1 sm:p-4 p-1  ${sairaFont.className} text-darkSky`}>Introducing the {car.unit_car.year} {car.model}</h1>
-         <div className={ ` text-navyBlue rounded-lg sm:px-5 px-1  ${sairaFont.className}`}>
+        <h2 className={`sm:text-xl text-lg font-bold  mb-1 sm:p-4 p-1  ${sairaFont.className} text-[#000000]`}>Introducing the {car.unit_car.year} {car.model}</h2>
+         <article className={ ` text-[#000000] rounded-lg sm:px-5 px-1  ${sairaFont.className}`}>
               <p className={` sm:text-sm text-xs  `}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,<br/> but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>   
-       </div>
+       </article>
          {/**Car History */}
-      <div className={`  bg-[#fff] rounded-xl ml-0 pb-5`}>
-        <h1 className={`sm:text-xl text-lg font-bold  mb-1 sm:p-4 p-1  ${sairaFont.className} text-darkSky`}>History</h1>
+      <article className={`  bg-[#fff] rounded-xl ml-0 pb-5`}>
+        <h2 className={`sm:text-xl text-lg font-bold  mb-1 sm:p-4 p-1  ${sairaFont.className} text-darkSky`}>History</h2>
       <div className={`sm:ml-1 ml-0`}>
        <div className={` text-navyBlue sm:px-5 rounded-lg sm:grid sm:grid-cols-[1fr_1fr_1fr] grid grid-cols-[1fr_1fr] gap-1 ${josefinFont.className}`}>
         <div className={`grid grid-cols-[50px_150px]`}>
@@ -257,10 +257,10 @@ const filteredTiresItems = filterItems(tiresItems);
        </div>
 
       </div>
-       </div>
+       </article>
         </div>
 
-        <div className={` h-auto  sm:mx-6  ${josefinFont.className} `}>
+        <section className={` h-auto  sm:mx-6  ${josefinFont.className} `}>
           <p className={`pt-3 text-darkSky pl-4 sm:text-lg text-md`}>Seller Location</p>
           <p className={`sm:text-md text-sm pl-4 pb-1 flex tracking-wider`}><span ><FaLocationDot className="text-darkSky text-lg"/></span>
           <span className={``}>{car.location}</span>
@@ -285,12 +285,12 @@ const filteredTiresItems = filterItems(tiresItems);
               <p>{car.specific_seller_contact.phone}</p>
            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
      
         {/** Accordion for Full Report */}
-              <div className={`w-screen bg-[#fff] mt-10 rounded-xl ml-0 sm:-ml-2 px-5`}>
-               <h1 className={`sm:text-2xl text-lg font-bold text-center ${sairaFont.className} text-darkSky`}>View Full Profile</h1>
+              <section className={`w-screen bg-[#fff] mt-10 rounded-xl ml-0 sm:-ml-2 px-5`}>
+               <h1 className={`sm:text-2xl text-lg font-bold text-center ${sairaFont.className} text-[#000000]`}>View Full Profile</h1>
         {/** Search Bar */}
   <div className=" sm:ml-12  ml-1 mb-4 flex justify-center">
     <input
@@ -312,13 +312,16 @@ const filteredTiresItems = filterItems(tiresItems);
 <Accordion title="Accessories" items={filteredAccessoriesItems} />
 <Accordion title="Tires" items={filteredTiresItems}/>
 </div>
-  </div>
+  </section>
          {/*Other Vehicles*/ }
          
-       <div className="mt-5 sm:-ml-2">
+       <section className="mt-5 sm:-ml-2">
 <SectionThree />
-       </div>
+       </section>
+
+       <footer>
   <Footer></Footer>
-    </div>
+       </footer>
+    </main>
   );
 }
