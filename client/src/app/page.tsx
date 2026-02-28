@@ -33,12 +33,9 @@ export default function Home() {
 
  console.log("Home page rendered!");
 
-  return (
-  
-    <div className="bg-white h-auto overflow-visible min-h-screen">
-      {/*<Header/>*/}
-<main className={`flex-1 w-full overflow-visible`}>
-            <div className="bg-transparent w-screen sm:h-[500px] h-[300px]  relative z-10">
+  return (  
+<main className={`flex-1 w-full overflow-visible bg-white h-auto  min-h-screen`}>
+            <header className="bg-transparent w-screen sm:h-[500px] h-[300px]  relative z-10">
                   <Image src="/images/golf.jpg" alt="Background" fill priority  className="object-cover " />
                     <div className="absolute inset-0 bg-black/30 z-0"></div>
 
@@ -56,7 +53,7 @@ export default function Home() {
            </div> 
             </div>   
              
-            </div>
+            </header>
 
 
 {/*<Image 
@@ -67,11 +64,11 @@ export default function Home() {
   className={`mt-5 mx-auto rounded-full object-cover sm:w-[80%] w-[90%] sm:h-[200px] h-[100px]`}
 />*/}
  
-<div className={` grid grid-cols-[1fr] gap-0 sm:grid-cols-[2fr_1fr] mt-2 sm:mt-10 w-screen sm:h-auto h-[400px] px-5  `}>
+<section className={` grid grid-cols-[1fr] gap-0 sm:grid-cols-[2fr_1fr] mt-2 sm:mt-10 w-screen sm:h-auto h-[400px] px-5  `}>
 <div className={`bg-white px-5  `}>
-<h2 className={`text-lg pt-2 sm:text-6xl ${josefinFont.className} text-[#000000]`}>
+<h1 className={`text-lg pt-2 sm:text-6xl ${josefinFont.className} text-[#000000]`}>
 FIND YOUR DREAM CAR TODAY
-</h2>
+</h1>
 <p className={`text-xs sm:text-lg pt-2 ${exoFont.className} text-[#000000]`}>Stop dreaming and start driving. Explore our hand-picked, pre-inspected vehicles <br/> waiting for you</p>
 <div className={`pt-2 flex mt-2`}>
 
@@ -125,23 +122,23 @@ FIND YOUR DREAM CAR TODAY
 
 </div>
 
-</div>
+</section>
 
 
-<div className={`mt-10 mx-auto text-center sm:w-[80%] w-[90%]  `}>
+<section className={`mt-10 mx-auto text-center sm:w-[80%] w-[90%]  `}>
   <p className={`text-xs sm:text-lg ${exoFont.className} text-[#000000]`}>Discover</p>
   <h1 className={`sm:text-5xl text-2xl ${josefinFont.className} text-[#000000]`}>FEATURED PROMINENTLY</h1>
   <p className={`text-xs sm:text-lg ${exoFont.className} text-[#000000]`}>Explore our wide selection of high quality cars</p>
-</div>
+</section>
 
-<div>
+<section>
   <BuySectionComponent/>
-</div>
+</section>
 
-<div className={`w-[90%] sm:w-screen sm:mx-0 mx-auto  mt-5 mb-5   `}>
+<section className={`w-[90%] sm:w-screen sm:mx-0 mx-auto  mt-5 mb-5   `}>
 <h2 className={`sm:text-5xl text-2xl text-center sm:pb-10 pb-1  ${josefinFont.className} text-[#000000]`}>PICK YOUR CAR</h2>
-<div className={`mt-5  mx-auto grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr_1fr] sm:gap-2 gap-2  sm:w-[80%] w-[90%]  h-auto`}>
-<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000]`}>
+<section className={`mt-5  mx-auto grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr_1fr] sm:gap-2 gap-2  sm:w-[80%] w-[90%]  h-auto`}>
+<article className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000]`}>
 <div className={`text-center pt-1`}>
 <div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
   <GrShieldSecurity size="1.5em" className="text-darkSky sm:text-3xl" />
@@ -150,8 +147,8 @@ FIND YOUR DREAM CAR TODAY
 <p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-darkSky rounded-full text-white`}>Learn More</p>
 
 </div>
-</div>
-<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000]`}>
+</article>
+<article className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000]`}>
 <div className={`text-center pt-1`}>
 <div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
   <SiTicktick size="1.5em" className="text-darkSky sm:text-3xl" />
@@ -160,8 +157,8 @@ FIND YOUR DREAM CAR TODAY
 <p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-darkSky rounded-full text-white`}>Learn More</p>
 
 </div>
-</div>
-<div className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000] `}>
+</article>
+<article className={`w-68 h-44 sm:w-68 sm:h-44 bg-white rounded-xl px-1 mt-5 ${exoFont.className} text-[#000000] `}>
 <div className={`text-center pt-1`}>
 <div className="bg-lightSky rounded-full w-12 h-12 sm:w-20 sm:h-20 mx-auto sm:-mt-10 -mt-5 flex items-center justify-center">
   <GrSettingsOption size="1.5em" className="text-darkSky sm:text-3xl" />
@@ -170,11 +167,11 @@ FIND YOUR DREAM CAR TODAY
 <p className={`text-xs sm:text-lg text-center py-2 sm:mt-4 mt-2  pt-2 cursor-pointer bg-darkSky rounded-full text-white`}>Learn More</p>
 
 </div>
-</div>
-</div>
-</div>
+</article>
+</section>
+</section>
 
-<div className="relative mt-5 mb-10 mx-auto  rounded-full sm:w-[95%] w-[90%] sm:h-[200px] h-[100px] overflow-hidden">
+<aside className="relative mt-5 mb-10 mx-auto  rounded-full sm:w-[95%] w-[90%] sm:h-[200px] h-[100px] overflow-hidden">
   {/* Background Image */}
   <Image 
     src="/images/audi A3.jpg" 
@@ -198,15 +195,15 @@ FIND YOUR DREAM CAR TODAY
   </div>
   
   {/* Icon positioned top-right */}
-</div>
+</aside>
 
 
 
+<footer><Footer/></footer>
 
-<Footer/>
 </main>
 
-</div>
+
 
   );
 }

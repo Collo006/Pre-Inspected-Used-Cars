@@ -54,6 +54,7 @@ const GET_CARS= gql `query CarsQuery{
         model
         image
         price
+        year
        }
 }`
 
@@ -94,9 +95,9 @@ const filteredCars = data.cars.filter((car)=>{
 });
 
     return (
-        <div className="w-screen bg-white">
+        <main className="w-screen bg-white">
             {/**Top Immage */}
-            <div className="bg-transparent w-screen sm:h-[400px] h-[300px]  relative z-10">
+            <header className="bg-transparent w-screen sm:h-[400px] h-[300px]  relative z-10">
 
                   <Image src="/images/oldies.jpg" alt="Background" fill priority  className="object-cover " />
                     <div className="absolute inset-0 bg-black/30 z-0"></div>
@@ -143,23 +144,20 @@ const filteredCars = data.cars.filter((car)=>{
 
             </div>   
 
-            </div>
+            </header>
 
     
             <div className={`mt-5 text-center  sm:text-2xl text-lg`}>
                 <h1 className={`${sairaFont.className} text-[#000000] `}> Select Your Best Ride </h1>
             </div>
-        <div className=" sm:px-1 " >
-            {/*
-            */}
 
-            <div className="mt-5 sm:px-10 grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr_1fr_1fr] pl-10 sm:gap-1 gap-2  sm:w-screen w-[90%]  h-auto bg-white ">
+            <section className=" border border-green-700 mt-5 px-5 grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]  sm:gap-1 gap-2 sm:w-screen w-[90%] h-auto bg-white ">
               {filteredCars.length === 0 && (
                 <p>No cars match your filters</p>
               )}
                 {filteredCars.map((car)=>(
                  
-                    <div  key={car.id} className={` ${exoFont.className} bg-white border border-lightSky shadow-md rounded-xl  w-auto h-80 mb-5 cursor-pointer overflow-hidden  hover:shadow-lg transition duration-300` }>
+                    <article  key={car.id} className={` ${exoFont.className} bg-white border border-lightSky shadow-md rounded-xl w-auto h-80 mb-5 cursor-pointer overflow-hidden  hover:shadow-lg transition duration-300` }>
                         <Link key={car.id} href={`/cars/${car.id}`}>
                          <div className={`relative w-auto sm:w-auto h-44 sm:h-52 rounded-lg`}>
                           <Image src={car.image} alt={car.model} fill className={`w-full h-full rounded-t-xl object-cover`}            
@@ -167,10 +165,10 @@ const filteredCars = data.cars.filter((car)=>{
                         </div>
                         </Link>
                         <div className={`pt-1 px-3`}>
-                         <h3 className={`text-sm text-navyBlue text-bold ${josefinFont.className}`}>{car.model} -2019</h3>
+                         <h2 className={`text-sm text-navyBlue text-bold ${josefinFont.className}`}>{car.model}-{car.year}</h2>
                          <hr className="my-1 pt-1 text-lightSky"/>
 <div className={`grid grid-cols-3 gap-1`}>
-<div className=" mx-auto"><SlSpeedometer  className="text-yellow-500 text-md"/><h6 className={`text-xs -ml-2`}>1500km</h6></div>
+<div className=" mx-auto"><SlSpeedometer  className="text-yellow-500 text-md"/><h2 className={`text-xs -ml-2`}>1500km</h2></div>
 <div className=" mx-auto"><LuFuel className="text-blue-500 text-md"/><h6 className={`text-xs -ml-2`}>Petrol</h6></div>
 <div className=" mx-auto"><GiGearStickPattern  className="text-green-500 text-md"/><h6 className={`text-xs -ml-2`}>Automatic</h6></div>
 </div>
@@ -183,12 +181,12 @@ const filteredCars = data.cars.filter((car)=>{
                              
                          </div>
                         </div>
-                    </div>
+                    </article>
                   
                 ))}
-            </div>
-        </div>
-                 <div className={`bg-white mt-5 grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr] sm:gap-5 gap-3 sm:px-10 px-1  w-screen h-auto`}>
+            </section>
+       
+                 <aside className={`bg-white mt-5 grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr] sm:gap-5 gap-3 sm:px-10 px-1  w-screen h-auto`}>
         <div className={` rounded-xl bg-lightSky shadow-xl grid sm:grid-cols-[370px_200px] grid-cols-[1fr] sm:w-auto w-[350px] gap-1 pt-5 px-5`}>
             <div className={``}>
             <h5 className={`${josefinFont.className} sm:text-3xl sm:pt-12 sm:pl-10 text-lg sm:text-darkSky text-darkSky `}>Do You Want To<br/> Sell your Car?</h5>
@@ -209,9 +207,11 @@ const filteredCars = data.cars.filter((car)=>{
                  <FaCarOn size="2em" className="text-darkSky sm:text-6xl text-3xl mt-3 sm:mb-0 mb-1 sm:mt-28"/>
             </div>
          </div>
-        </div>
+        </aside>
 
+         <footer>
         <Footer></Footer>
-        </div>
+         </footer>
+        </main>
     )
 }
