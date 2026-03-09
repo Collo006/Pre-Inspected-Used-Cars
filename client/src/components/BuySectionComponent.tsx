@@ -34,6 +34,7 @@ const GET_CARS=gql`query CarsQuery{
         model
         image
         price
+        year
     }
 }`
 
@@ -55,7 +56,7 @@ export default function BuySectionComponent(){
                         </div>
                         </Link>
                                           <div className={`pt-1 px-3`}>
-                                                 <h3 className={`text-sm text-navyBlue text-bold ${josefinFont.className}`}>{car.model} -2019</h3>
+                                                 <h3 className={`text-sm text-navyBlue text-bold ${josefinFont.className}`}>{car.model}-{car.year}</h3>
                                                  <hr className="my-1 pt-1 text-lightSky"/>
                         <div className={`grid grid-cols-3 gap-1`}>
                         <div className=" mx-auto"><SlSpeedometer  className="text-yellow-500 text-md"/><h6 className={`text-xs -ml-2`}>1500km</h6></div>

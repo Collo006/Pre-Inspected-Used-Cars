@@ -43,14 +43,14 @@ export default function Accordion({ title, items }: AccordionProps) {
 
   return (
     
-    <div className=" text-navyBlue rounded-lg mb-10 sm:p-5">
+    <section className=" text-navyBlue rounded-lg mb-10 sm:p-5">
 
 
 
-      <h2 className={`text-xl font-bold sm:mb-4  text-center  ${sairaFont.className}`}>{title}</h2>
+      <h1 className={`text-xl font-bold sm:mb-4  text-center  ${sairaFont.className}`}>{title}</h1>
 
       {items.map((item, index) => (
-        <div
+        <article
           key={index}
           className=" cursor-pointer mb-2 pl-5 py-1  sm:ml-0 -ml-3"
           onClick={() => toggleOpen(index)}
@@ -68,10 +68,10 @@ export default function Accordion({ title, items }: AccordionProps) {
             </p>
           </div>
           <hr className={`text-navyBlue sm:mx-0 -ml-1 mx-1`}/>
-        </div>
+        </article>
         
       ))}
-    </div>
+    </section>
     
   );
 

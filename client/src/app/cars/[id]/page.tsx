@@ -303,15 +303,15 @@ const filteredTiresItems = filterItems(tiresItems);
   </div>
 
 
-       <div className={`bg-lightSky  text-navyBlue  rounded-lg sm:p-5 p-1 mb-5 grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr] gap-1`}>
+       <article className={`bg-lightSky  text-navyBlue  rounded-lg sm:p-5 p-1 mb-5 grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr] gap-1`}>
       <Accordion title="Exterior" items={filteredExteriorItems} />
 <Accordion title="Suspension" items={filteredSuspensionItems} />
-       </div>
-              <div className={`bg-lightSky  text-navyBlue  rounded-lg sm:p-5 p-1 mb-5 grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr] gap-1`}>
+       </article>
+              <article className={`bg-lightSky  text-navyBlue  rounded-lg sm:p-5 p-1 mb-5 grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr] gap-1`}>
        <Accordion title="Interior" items={filteredInteriorItems} />
 <Accordion title="Accessories" items={filteredAccessoriesItems} />
 <Accordion title="Tires" items={filteredTiresItems}/>
-</div>
+</article>
   </section>
          {/*Other Vehicles*/ }
          

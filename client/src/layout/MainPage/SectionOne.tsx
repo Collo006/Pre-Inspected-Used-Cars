@@ -68,13 +68,13 @@ export default function SectionOne() {
   if (!data?.newarrivals) return <p>No cars to Display</p>
 
   return (
-    <div >
+    <section >
       <div className={`mt-5 text-center `}>
         <h1  className={`${exoFont.className} sm:text-4xl text-[#000000]  `}>NEW ARRIVALS</h1>
         <p className={`${sairaFont.className} text-[#000000] text-lg`}>Find Newly Posted Cars from approved sellers</p>
       </div>
       
-      <section className="mt-2 w-full flex justify-center">
+      <article className="mt-2 w-full flex justify-center">
         <div className="relative sm:w-full w-[400px] h-[400px] overflow-hidden ">
           {/* Sliding container */}
           <div 
@@ -152,10 +152,10 @@ export default function SectionOne() {
             ))}
           </div>
         </div>
-      </section>
+      </article>
 
 
 
-    </div>
+    </section>
   )
 }

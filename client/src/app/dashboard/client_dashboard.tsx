@@ -22,8 +22,8 @@ export default function UserDashBoard({session}:{session: Session}) {
  const user = session.user
 
   return (
-<div className=" w-auto bg-white">
-  <div className="bg-transparent w-screen sm:h-[400px] h-[300px]  relative z-10">
+<main className=" w-auto bg-white">
+  <header className="bg-transparent w-screen sm:h-[400px] h-[300px]  relative z-10">
 <Image src="/images/header-bg.jpg" alt="Background" fill priority  className="object-cover " />
 <div className="absolute inset-0 bg-black/30 z-0"></div>
 <div className="w-screen z-10 absolute sm:mt-10 sm:ml-10 mt-5 ml-1" >
@@ -39,17 +39,20 @@ export default function UserDashBoard({session}:{session: Session}) {
 <FaLinkedin className="hover:text-[#0077B5]"/>
            </div>      
 </div>
-</div>
+</header>
          
-  <div>
+  <section>
     <SectionOne/>
     <SectionTwo/>
     <MiniSectionThree/>
     <SectionThree/>
     <SectionFour/>
-  </div>
+  </section>
+
+  <footer>
   <Footer/>
-</div>
+  </footer>
+</main>
   );
 }
 

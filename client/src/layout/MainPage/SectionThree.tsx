@@ -92,14 +92,14 @@ export default function SectionThree() {
   const goToSlide = (index: number) => setCurrentSlide(index);
 
   return (
-    <div className="mt-5 sm:ml-0 ml-0 py-10 bg-white sm:w-screen w-full ">
-      <section className="max-w-7xl mx-auto px-4 ">
+    <section className="mt-5 sm:ml-0 ml-0 py-10 bg-white sm:w-screen w-full ">
+      <div className="max-w-7xl mx-auto px-4 ">
         <h1
           className={`sm:text-2xl text-2xl text-[#000000] font-bold text-center mb-10 ${exoFont.className}`}
         >
           SUV and Pickup Deals
         </h1>
-      </section>
+      </div>
 
       {/* Full-screen scrollable area */}
       <div className="relative w-screen left-1/2 right-1/2 sm:-mx-[50vw] -mx-[55vw]">
@@ -163,7 +163,7 @@ export default function SectionThree() {
                 >
                   {/* MOBILE LAYOUT - Single card centered */}
                   {isMobile ? (
-                    <div className="flex justify-center px-4 ml-6">
+                    <article className="flex justify-center px-4 ml-6">
                       {carsForThisSlide.map((car) => (
                         <div
                           key={car.id}
@@ -205,10 +205,10 @@ export default function SectionThree() {
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </article>
                   ) : (
                     /* DESKTOP LAYOUT - 5 cards with flex */
-                    <div className="flex justify-center gap-4 px-6">
+                    <article className="flex justify-center gap-4 px-6">
                       {carsForThisSlide.map((car) => (
                         <div
                           key={car.id}
@@ -251,7 +251,7 @@ export default function SectionThree() {
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </article>
                   )}
                 </div>
               );
@@ -277,6 +277,6 @@ export default function SectionThree() {
           ))}
         </section>
       )}
-    </div>
+    </section>
   );
 }

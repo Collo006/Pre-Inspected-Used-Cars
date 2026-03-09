@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ApolloWrapper from "@/components/ApolloWrapper";
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -28,15 +27,7 @@ export default async function RootLayout({
         <ApolloWrapper>
             {children}
         </ApolloWrapper>
-         {/* Debug script */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            console.log('Client-side mount');
-            window.addEventListener('error', (e) => {
-              console.error('Caught error:', e.error);
-            });
-          `
-        }} />
+        
       </body>
     </html>
   );

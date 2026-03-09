@@ -66,7 +66,7 @@ if(!data?.review)return <p>No car data is available</p>
 
 
     return(
-         <div className=" sm:ml-0 sm:w-screen w-screen sm:rounded-xl mt-5  ">
+         <article className=" sm:ml-0 sm:w-screen w-screen sm:rounded-xl mt-5  ">
 
 
 
@@ -188,6 +188,6 @@ if(!data?.review)return <p>No car data is available</p>
                 </div>            </div>
 
           </div>
-         </div>
+         </article>
     )
 }
