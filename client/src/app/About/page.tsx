@@ -11,6 +11,11 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaCarOn } from "react-icons/fa6";
 import { FaCarCrash } from "react-icons/fa";
 
+export const metadata = {
+  title: "About Pre-Inspected Used Cars | Kenya's Trusted Pre-Owned Dealer",
+  description: "Learn why Pre-Inspected Used Cars is Kenya's most trusted pre-owned vehicle dealer. We professionally inspect every car to ensure quality, safety, and reliability for our customers.",
+}
+
 const exoFont= Exo_2({
   subsets:["latin"],
   weight:"500",

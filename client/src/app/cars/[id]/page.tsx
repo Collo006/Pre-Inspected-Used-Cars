@@ -43,6 +43,7 @@ type PageProps = {
 };
 
 
+
 export default function CarDetailsPage({ params }: PageProps) {  
 
   const [searchQuery, setSearchQuery] = useState("");  

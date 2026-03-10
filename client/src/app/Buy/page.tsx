@@ -17,7 +17,10 @@ import { Exo_2 } from "next/font/google";
 import { FaCarOn } from "react-icons/fa6";
 import { FaCarCrash } from "react-icons/fa";
 
-
+export const metadata = {
+  title: "Buy Pre Inpsected Used Cars in Kenya | Inspected Vehicles for Sale",
+  description: "Browse our inventory of inspected used cars in Kenya. Filter by make, model, price, and year. All vehicles come with a comprehensive inspection report.",
+}
 
 
 
