@@ -2,6 +2,7 @@
 import { auth } from "../../../lib/auth";
 import Image from "next/image"; 
 import { Josefin_Sans } from "next/font/google";
+
 import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa6";
 import SectionThree from "@/layout/MainPage/SectionThree";
 import Footer from "@/layout/Footer";
