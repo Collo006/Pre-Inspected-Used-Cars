@@ -3,7 +3,14 @@
 const nextConfig = {
 
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'localhost',
+        port: '3000',
+        pathname: '/**',
+      }
+    ],
     unoptimized: true, // If you have many images
   },
 }
