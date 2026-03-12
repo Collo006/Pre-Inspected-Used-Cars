@@ -112,7 +112,7 @@ const filteredCars = data.cars.filter((car)=>{
     <div className="bg-transparent border border-lightSky rounded-full sm:h-[70px] flex justify-start items-center sm:w-[80%] w-screen sm:mt-5 h-auto mt-10 pt-1 -ml-1 sm:ml-0">
 
      {/** Search */}
-          <input type="text" placeholder="Search model..." value={search}  className={` ${sairaSmallFont.className} bg-transparent text-white rounded-full sm:ml-5 ml-2 pl-2 sm:w-[290px] sm:h-[50px] w-[25%] h-auto sm:text-lg text-xs `} onChange={(e)=>setSearch(e.target.value)}/>
+          <input type="text" placeholder="Search model..." value={search}  className={` ${sairaSmallFont.className} bg-transparent text-white rounded-full sm:ml-5 ml-2 pl-2 sm:w-[290px] sm:h-[50px] w-[25%] h-auto sm:text-lg text-xs focus:outline-none focus:border-0 focus:ring-0`} onChange={(e)=>setSearch(e.target.value)}/>
   
     <div className={`flex sm:justify-between justify-start sm:w-[70%] w-[30%] mt-1 sm:ml-1 ml-0 sm:pl-5 sm:pr-5 pl-0 pr-0`}>
     {/*Model*/}
@@ -151,7 +151,7 @@ const filteredCars = data.cars.filter((car)=>{
                 <h1 className={`${sairaFont.className} text-[#000000] `}> Select Your Best Ride </h1>
             </div>
 
-            <section className=" border border-green-700 mt-5 px-5 grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]  sm:gap-1 gap-2 sm:w-screen w-[90%] h-auto bg-white ">
+            <section className="  mt-5 px-5 grid grid-cols-[1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]  sm:gap-1 gap-2 sm:w-screen w-[90%] h-auto bg-white ">
               {filteredCars.length === 0 && (
                 <p>No cars match your filters</p>
               )}

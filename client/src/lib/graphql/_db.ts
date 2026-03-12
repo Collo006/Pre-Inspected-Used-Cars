@@ -1,9 +1,9 @@
 const cars = [
     { id: '1', model: 'Mazda CX-5', location: 'Makuyu',image: "/images/mazda cx-5.jpg",price:"2,345,699",year:"2018", unitcar_id:"1",specificCarHistory_id:"1",specificCarInterior_id:"1",specificCarExterior_id:"1",specificCarSuspension_id:"1",specificCarAccessory_id:"1",specificCarTire_id:"1",specificSellerContact_id:"1"},
     { id: '2', model: 'VW Golf', location: 'Makuya',image: "/images/vw golf.jpg",price:"890,123",year:"2017", unitcar_id:"2",specificCarHistory_id:"2",specificCarInterior_id:"2",specificCarExterior_id:"2",specificCarSuspension_id:"2",specificCarAccessory_id:"2",specificCarTire_id:"2",specificSellerContact_id:"2"},
-    { id: '3', model: 'Mercedes C180', location: 'Makuyaa',image: "/images/mercedes c180.jpg",price:"1,234,567",year:"2020", unitcar_id:"3",specificCarHistory_id:"3",specificCarInterior_id:"3",specificCarExterior_id:"3",specificCarSuspension_id:"3",specificCarAccessory_id:"3",specificCarTire_id:"3",specificSellerContact_id:"3"},
-    { id: '4', model: 'Mazda 3', location: 'Makuyi',image: "/images/mazda 3(right).jpg",price:"500,761",year:"2014", unitcar_id:"4",specificCarHistory_id:"4",specificCarInterior_id:"4",specificCarExterior_id:"4",specificCarSuspension_id:"4",specificCarAccessory_id:"4",specificCarTire_id:"4",specificSellerContact_id:"4"},
-    { id: '5', model: 'Mazda CX-2', location: 'Makulu',image: "/images/car5.jpg",price:"500,00",year:"2012", unitcar_id:"5",specificCarHistory_id:"5",specificCarInterior_id:"5",specificCarExterior_id:"5",specificCarSuspension_id:"5",specificCarAccessory_id:"5",specificCarTire_id:"5",specificSellerContact_id:"5"},
+    { id: '3', model: 'Mercedes c180', location: 'Makuyaa',image: "/images/mercedes c180.jpg",price:"1,234,567",year:"2020", unitcar_id:"3",specificCarHistory_id:"3",specificCarInterior_id:"3",specificCarExterior_id:"3",specificCarSuspension_id:"3",specificCarAccessory_id:"3",specificCarTire_id:"3",specificSellerContact_id:"3"},
+    { id: '4', model: 'Mazda 3', location: 'Makuyi',image: "/images/mazda 3(right).jpg",price:"592,761",year:"2014", unitcar_id:"4",specificCarHistory_id:"4",specificCarInterior_id:"4",specificCarExterior_id:"4",specificCarSuspension_id:"4",specificCarAccessory_id:"4",specificCarTire_id:"4",specificSellerContact_id:"4"},
+    { id: '5', model: 'Audi A4', location: 'Makulu',image: "/images/audi a4(right).jpg",price:"1,987,431",year:"2018", unitcar_id:"5",specificCarHistory_id:"5",specificCarInterior_id:"5",specificCarExterior_id:"5",specificCarSuspension_id:"5",specificCarAccessory_id:"5",specificCarTire_id:"5",specificSellerContact_id:"5"},
     { id: '6', model: 'Mazda CX-10', location: 'Makuyus',image: "/images/car6.jpg",price:"500,00",year:"2010", unitcar_id:"6",specificCarHistory_id:"6",specificCarInterior_id:"6",specificCarExterior_id:"6",specificCarSuspension_id:"6",specificCarAccessory_id:"6",specificCarTire_id:"6",specificSellerContact_id:"6"}
 ];
 const newarrivals=[
@@ -53,11 +53,11 @@ const carspecifications = [
     { id: '3', price: "1,234,567", mileage: "190", engine_size: "200cc",
         engine_power: "223 Hp", fuel: "10 km per Liter", year: "2020", reg_no: "KDN 789S",
         color: "white" },
-    { id: '4', price: "500,761", mileage: "50", engine_size: "390cc",
+    { id: '4', price: "592,761", mileage: "50", engine_size: "390cc",
         engine_power: "181 Hp", fuel: "20 km per Liter", year: "2014", reg_no: "KCS 157H",
         color: "blue" },
-    { id: '5', price: "181,00", mileage: "600", engine_size: "400cc",
-        engine_power: "500 Hp", fuel: "20 km per Liter", year: "2012", reg_no: "KBJ 529J",
+    { id: '5', price: "1,987,431", mileage: "600", engine_size: "400cc",
+        engine_power: "500 Hp", fuel: "20 km per Liter", year: "2018", reg_no: "KBJ 529J",
         color: "silver" },
     { id: '6', price: "195,00", mileage: "300", engine_size: "300cc",
         engine_power: "422 Hp", fuel: "20 km per Liter", year: "2009", reg_no: "KAP 621A",
@@ -143,7 +143,7 @@ const exteriors= [
     {id:"2", doors:"functional", paint:"good condition", windscreen:"good condition",headlights:"functional",windows:"functional",bumper:"good condition",side_mirrors:"good condition", transmission_engine:["good condition","very good"],wipers:"functional", front:"/images/vw golf(front).jpg", rear:"/images/vw golf(rear1).jpg", left:"/images/vw golf(left).jpg", right:"/images/vw golf(right).jpg"},
     {id:"3", doors:"functional", paint:"good condition", windscreen:"good condition",headlights:"functional",windows:"functional",bumper:"good condition",side_mirrors:"good condition", transmission_engine:["good condition","very good"],wipers:"functional", front:"/images/mercedes c180.jpg", rear:"/images/mercedes c180(rear).jpg", left:"/images/mercedes c180(left).jpg", right:"/images/mercedes c180(right)"},
     {id:"4", doors:"functional", paint:"good condition", windscreen:"good condition",headlights:"functional",windows:"functional",bumper:"good condition",side_mirrors:"good condition", transmission_engine:["very good"],wipers:"functional", front:"/images/mazda 3(left).jpg", rear:"/images/mazda 3(rear).jpg", left:"/images/mazda 3(left).jpg", right:"/images/mazda 3(right).jpg"},
-    {id:"5", doors:"functional", paint:"good condition", windscreen:"good condition",headlights:"functional",windows:"functional",bumper:"good condition",side_mirrors:"good condition", transmission_engine:["good condition","very good"],wipers:"functional", front:"/images/amg-1 1.png", rear:"/images/amg-2 1.png", left:"/images/amg-3.jpg", right:"/images/amg-4 1.png"},
+    {id:"5", doors:"functional", paint:"good condition", windscreen:"good condition",headlights:"functional",windows:"functional",bumper:"good condition",side_mirrors:"good condition", transmission_engine:["good condition","very good"],wipers:"functional", front:"/images/audi a4(left).jpg", rear:"/images/audi a4(right).jpg", left:"/images/audi a4.jpg", right:"/images/audi a4(left).png"},
     {id:"6", doors:"functional", paint:"good condition", windscreen:"good condition",headlights:"functional",windows:"functional",bumper:"good condition",side_mirrors:"good condition", transmission_engine:["good condition","very good"],wipers:"functional", front:"/images/amg-1 1.png", rear:"/images/amg-2 1.png", left:"/images/amg-3.jpg", right:"/images/amg-4 1.png"}
 ];
 const suspensions=[
