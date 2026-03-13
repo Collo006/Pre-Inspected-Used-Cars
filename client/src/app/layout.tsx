@@ -14,7 +14,7 @@ export const metadata: Metadata = {
    url: "https://pre-inspected-used-cars-kenya.vercel.app/",
    images:[
     {
-      url:"/images/PINUC.png",
+      url:"'https://pre-inspected-used-cars-kenya.vercel.app/images/PINUC.png'",
       width: 1200,
       height: 630,
       alt: "Pre-Inspected Used Cars Kenya Logo"
