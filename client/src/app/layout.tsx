@@ -6,7 +6,16 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Pre-Inspected Used Cars Kenya | #1 Pre-Owned Vehicle Dealer in Nairobi",
   description:  "Find quality inspected used cars in Kenya. Browse 50+ pre-owned vehicles in Nairobi including Toyota, Nissan, BMW & Subaru. All cars verified & ready for test drive.",
-  keywords: ["used cars Kenya, inspected used cars Nairobi, pre-owned vehicles Kenya, buy used cars Nairobi, Toyota used cars Kenya, Nissan used cars Kenya, BMW used cars Kenya, Subaru used cars Kenya,Mercedes used cars Kenya, Suzuki used cars Kenya"],
+  keywords: ["used cars Kenya", 
+    "inspected used cars Nairobi", 
+    "pre-owned vehicles Kenya", 
+    "buy used cars Nairobi", 
+    "Toyota used cars Kenya", 
+    "Nissan used cars Kenya", 
+    "BMW used cars Kenya", 
+    "Subaru used cars Kenya",
+    "Mercedes used cars Kenya", 
+    "Suzuki used cars Kenya"],
   openGraph:{
     title: "Pre-Inspected Used Cars Kenya | #1 Pre-Owned Vehicle Dealer in Nairobi Kenya",
     description: "Find quality inspected used cars in Kenya. Browse 50+ pre-owned vehicles in Nairobi including Toyota, Nissan, BMW & Subaru. All cars verified & ready for test drive.",
@@ -14,7 +23,7 @@ export const metadata: Metadata = {
    url: "https://pre-inspected-used-cars-kenya.vercel.app/",
    images:[
     {
-      url:"'https://pre-inspected-used-cars-kenya.vercel.app/images/PINUC.png'",
+      url:'https://pre-inspected-used-cars-kenya.vercel.app/images/PINUC.png',
       width: 1200,
       height: 630,
       alt: "Pre-Inspected Used Cars Kenya Logo"
@@ -30,7 +39,7 @@ export const metadata: Metadata = {
     creator:"@PreInspectedCarsKE",
     images:[
       {
-        url:"/images/PINUC.png",
+        url:"https://pre-inspected-used-cars-kenya.vercel.app/images/PINUC.png",
         width: 1200,
         height: 630,
         alt: "Pre-Inspected Used Cars Kenya Logo"
