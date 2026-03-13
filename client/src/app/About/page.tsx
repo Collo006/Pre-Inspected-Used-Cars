@@ -21,7 +21,7 @@ export const metadata = {
    url: "https://pre-inspected-used-cars-git-master-collins-projects-3eca33c8.vercel.app/",
    images:[
     {
-      url:"https://pre-inspected-used-cars-git-master-collins-projects-3eca33c8.vercel.app/images/PINUC.png",
+      url:"https://pre-inspected-used-cars-git-master-collins-projects-3eca33c8.vercel.app/images/PINUC .png",
       width: 1200,
       height: 630,
       alt: "Pre-Inspected Used Cars Kenya Logo"
@@ -37,7 +37,7 @@ export const metadata = {
     creator:"@PreInspectedCarsKE",
     images:[
       {
-        url:"https://pre-inspected-used-cars-git-master-collins-projects-3eca33c8.vercel.app/images/PINUC.png",
+        url:"https://pre-inspected-used-cars-git-master-collins-projects-3eca33c8.vercel.app/images/PINUC .png",
         width: 1200,
         height: 630,
         alt: "Pre-Inspected Used Cars Kenya Logo"
