@@ -53,11 +53,11 @@ export const metadata = {
 
 export default async function DashboardPage() {
 
-const session= await auth.api.getSession({headers: await headers()});
+//const session= await auth.api.getSession({headers: await headers()});
 
-if(!session){
-  redirect("/SignUp")
-}
+//if(!session){
+ // redirect("/SignUp")
+//} session={session}
 
-  return <UserDashBoard  session={session}/>;
+  return <UserDashBoard  />;
 }

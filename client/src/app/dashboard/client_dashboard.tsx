@@ -18,9 +18,11 @@ const josefinFont= Josefin_Sans({
   display:"swap"
 })
 
-type Session =typeof auth.$Infer.Session;
-export default function UserDashBoard({session}:{session: Session}) {
- const user = session.user
+//type Session =typeof auth.$Infer.Session;
+export default function UserDashBoard() {
+ 
+ // const user = session.user
+//{session}:{session: Session}
 
   return (
 <main className=" w-auto bg-white">
@@ -31,7 +33,7 @@ export default function UserDashBoard({session}:{session: Session}) {
     <div className="flex justify-between sm:justify-end sm:flex-row  sm:gap-4 sm:pr-28 pr-3">
       <Header/>
 </div>                       
-<p className={`${josefinFont.className} sm:text-5xl text-lg text-white pt-4 sm:pt-6 `}>Welcome {user.name}!</p>
+<p className={`${josefinFont.className} sm:text-5xl text-lg text-white pt-4 sm:pt-6 `}>Welcome {/*user.name*/}!</p>
 <p className={`${josefinFont.className} sm:text-5xl text-lg sm:text-white text-white sm:pt-5 `}><span >Let&apos;s find your Perfect Ride.</span></p>
   <div className="flex justify-start gap-4 pb-3 sm:text-2xl text-sm text-white text-center cursor-pointer mt-5">
                <FaInstagram className="hover:text-[#d62976]"/>
