@@ -48,12 +48,27 @@ async function handleFileUpload(){
 }
     return(
         <div className="space-y-4">
-            <input type="file" onChange={handleFileChange} className="text-navyBlue cursor-pointer"/>
+            <label className="
+      text-navyBlue 
+      cursor-pointer 
+      px-6 
+      py-2 
+      border-2 
+      border-lightSky 
+      rounded-lg
+      hover:bg-darkSky 
+      hover:text-white 
+      hover:border-darkSky
+      transition-all
+      duration-300
+      inline-block
+    ">Choose File
+        <input type="file" onChange={handleFileChange} className="hidden"/>
+    </label>
             {file &&(
-                <div className="mb-4 text-sm">
+                <div className="mb-1 text-sm">
                 <p>File Name:{file.name}</p>
                 <p>File Size:{(file.size / 1024).toFixed(2)}KB</p>
-                <p>File Type:{file.type}</p>
                 </div>
             )}
 
@@ -66,14 +81,14 @@ async function handleFileUpload(){
                 </div>
             )}
 
-            {file && status !== "uploading" && <button onClick={handleFileUpload}>Upload</button>}
+            {file && status !== "uploading" && <button onClick={handleFileUpload} className="cursor-pointer">Upload</button>}
             {status === "success" &&(
-                <p className="mt-2 text-sm text-green-600">
+                <p className="-mt-4 text-sm text-green-600">
                     File uploaded Successfully
                 </p>
             ) }
             {status === "error" &&(
-                <p className="mt-2 text-sm text-red-600">
+                <p className="-mt-4 text-sm text-red-600">
                     File uploaded Failed!
                 </p>
             ) }
