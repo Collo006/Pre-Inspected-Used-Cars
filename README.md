@@ -63,3 +63,4 @@ Next.js	Server-side rendering & routing
 TypeScript	Type safety & maintainability
 Tailwind CSS	Utility-first styling
 React Native	Mobile app experience
+GraphQL Database to store car records
